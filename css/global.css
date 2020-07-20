@@ -1,0 +1,72 @@
+        :root {
+            --padding-big: 40px;
+            --padding: 20px;
+            --padding-small: 10px;
+            --padding-xsmall: 5px;
+        }
+
+        @media (min-width:768px) {
+            :root {
+                /* --padding-big: 60px;
+                --padding: 30px;
+                --padding-small: 15px;
+                --padding-xsmall: 6px; */
+                --padding-big: 48px;
+                /* --padding: 24px;
+                --padding-small: 12px;
+                --padding-xsmall: 4px;
+                --padding-big: 60px; */
+                --padding: 28px;
+                --padding-small: 14px;
+                --padding-xsmall: 4px;
+            }
+
+        }
+
+        :root {
+            --w-safe: 640px;
+            --w-max: 1280px;
+        }
+
+
+        .w-safe {
+            max-width: var(--w-safe);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .w-max {
+            max-width: var(--w-max);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .w-full {
+            max-width: 100%;
+        }
+
+
+        .relative {
+            position: relative;
+        }
+
+        .row-block {
+            padding: var(--padding-small) 0 !important;
+            display: block;
+        }
+
+        @media only screen and (min-width : 768px) {
+
+            .row-block {
+                padding: var(--padding-big) 0 !important;
+                display: block;
+            }
+
+        }
+
+
+        .valign {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }

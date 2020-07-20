@@ -1,0 +1,260 @@
+.article-body {
+  padding: var(--padding-big) 0;
+  width: 100%;
+}
+
+.article-body >*:not(figure) {
+  padding: 0 var(--padding);
+}
+
+.article-body > * {
+  padding: 0 var(--padding);
+}
+
+/* .article-body .lead { 
+    font-size:var(--lead);
+    font-weight:600;
+    font-style: normal;
+    margin-bottom:var(--padding);
+    display:block;
+} */
+
+/* .byline::before { 
+    content:""; display: block; height:1px; background-color:var(--color-lightgrey);
+    margin-bottom:var(--padding-small); opacity:.25;
+}
+
+.byline::after { 
+    content:""; display: block; height:1px; background-color:var(--color-lightgrey);
+    margin-top:var(--padding-small); opacity:.25;
+} */
+
+:root {
+  --color: #ee0099;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-offblack: #1a1b1c;
+  --color-offwhite: #fafbfc;
+  --color-light: #eee;
+  --color-lightgrey: #babbbc;
+  --color-lightgrey-half: #babbbc50;
+  --color-grey: #aaabac;
+  --color-grey-half: #aaabac50;
+  --dark-border: #babbbc50;
+}
+
+:root {
+  --font-1: 'Noto Sans JP', Helvetica, Arial, sans-serif;
+  --font-2: 'Noto Sans JP', Helvetica, Arial, sans-serif;
+  --p: 1.15rem;
+  --lead: calc(var(--p) + 25%);
+  --small: calc(var(--p) - 20%);
+  --xsmall: calc(var(--p) - 40%);
+  --line-height: 1.8;
+  --teaser-headline: 1.4rem;
+  --teaser-line: 1.4;
+}
+
+@media (min-width:600px) {
+  :root {
+    --p: 1.3rem;
+    --line-height: 1.8;
+    --teaser-headline: 2rem;
+  }
+}
+
+* {
+  font-family: var(--font-2);
+  line-height: var(--line-height);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-1);
+  font-weight: 900;
+}
+
+:root {
+  --padding-big: 40px;
+  --padding: 20px;
+  --padding-small: 10px;
+  --padding-xsmall: 5px;
+}
+
+@media (min-width:600px) {
+  :root {
+    --padding-big: 60px;
+    --padding: 30px;
+    --padding-small: 15px;
+    --padding-xsmall: 6px;
+  }
+
+  :root {
+    --w-safe: 768px;
+    --w-max: 1240px;
+  }
+}
+
+[class*=colspan-] {
+  grid-column: span 12;
+}
+
+:root {
+  --hero-kicker: 1rem;
+  --hero-headline: 1.8rem;
+  --hero-headline-line: 1.4;
+  --hero-subheadline: 1rem;
+  --hero-subheadline-line: 2;
+}
+
+@media (min-width:600px) {
+  :root {
+    --hero-kicker: 1.25rem;
+    --hero-headline: 3.6rem;
+    --hero-subheadline: 1.8rem;
+    --hero-headline-line: 1.4;
+    --hero-subheadline-line: 1.8;
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+.hero .header {
+  position: relative;
+  z-index: 2;
+  padding: var(--padding-big) var(--padding-big);
+}
+
+.hero .header h1 {
+  font-size: var(--hero-headline);
+  line-height: var(--hero-headline-line);
+  margin-bottom: var(--padding);
+}
+
+:root {
+  --nav-height: 70px;
+}
+
+@media (min-width:600px) {
+  :root {
+    --nav-height: 90px;
+  }
+}
+
+/* If nav scrolled up (or burger button clciked) */
+
+/* freeze scrolling of main content when nav is on */
+
+/***/
+
+/* need this for scrolling */
+
+/* nav-menu-elements animate when burger clicked */
+
+/* Hamburger menu*/
+
+/*Styling Hamburger Icons */
+
+/*Animating Hamburger Icon on Click*/
+
+:root {
+  --nav-height: 70px;
+}
+
+@media (min-width:600px) {
+  :root {
+    --nav-height: 90px;
+  }
+}
+
+.prefade {
+  opacity: 0;
+}
+
+.postfade {
+  opacity: 1;
+  transition: opacity 1s;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+}
+
+article,body,div,footer,h1,h2,h3,h4,h5,h6,header,html,var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(26, 26, 26, 0.99);
+  color: #ffffff;
+}
+
+*:focus {
+  outline: none;
+}
+
+::placeholder {
+  opacity: 0.5;
+}
+
+/* Smartphones (portrait) */
+
+/* iPads (portrait) */
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops */
+
+/* new style */
+
+/* Post Byline */
+
+:root {
+  --byline-height: 100px;
+}
+
+@media (min-width:600px) {
+  :root {
+    --byline-height: 120px;
+  }
+}

@@ -1,0 +1,62 @@
+/* Post Byline */
+
+:root {
+    --byline-height:100px;
+}
+
+@media (min-width:600px) {
+:root {
+    --byline-height: 120px;
+}
+}
+
+.byline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 1;
+    border-top:1px solid var(--color-light);
+    border-bottom:1px solid var(--color-light);
+    /* padding: var(--padding); */
+    color: var(--color-grey);
+}
+
+.byline>a>img {
+    margin: 0;
+    padding: 0;
+    height: calc(var(--byline-height) - var(--padding));
+    width: calc(var(--byline-height) - var(--padding));
+    border-radius: 50%;
+    
+
+}
+
+.byline figcaption {
+    font-size: var(--small);
+}
+
+.byline figcaption p {
+    font-size: var(--small) !important;
+}
+
+.byline>a {
+    height: 100%;
+    margin-right: var(--padding);
+    height: calc(var(--byline-height) - var(--padding));
+    width: calc(var(--byline-height) - var(--padding));
+    font-size: var(--small);
+    color: var(--color-black);
+}
+
+
+.byline figcaption time {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    font-size: var(--xsmall);
+}
+
+
+time#modified { font-size:var(--xsmall); opacity:.5; }

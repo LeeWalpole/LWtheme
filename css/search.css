@@ -1,0 +1,24 @@
+::selection {
+    background-color: rgba(26, 26, 26, 0.99);
+    color: #ffffff;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type='search'] {
+    cursor: pointer;
+    font-size: var(--hero-headline);
+    padding: var(--padding) var(--padding);
+    ;
+    border: none;
+    background-color: var(--color-offwhite);
+    width: 100%;
+    display: block;
+    border-bottom:1px solid var(--color-grey-half);
+}
+
+::placeholder {
+    opacity: 0.5;
+}

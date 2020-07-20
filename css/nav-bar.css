@@ -1,0 +1,232 @@
+:root {
+    --nav-height: 70px;
+}
+
+@media (min-width:768px) {
+    :root {
+        --nav-height: 90px;
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    transition: all 0.33s;
+    height: var(--nav-height);
+    width: 100vw;
+}
+
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    transition: all 0.33s;
+    height: var(--nav-height);
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(0);
+    padding:0 var(--padding);
+}
+
+.nav-bar img { 
+    transition: all 0.33s;
+} 
+
+.prescroll .nav-bar img { 
+    /* filter: brightness(0) invert(0); */
+    transition: all 0.33s;
+} 
+
+.scrolling-up .nav-bar img { 
+    filter: brightness(0) invert(100);
+}
+
+.nav-on .nav-bar img { 
+    /* filter: brightness(0) invert(0); */
+    transition: all 0.33s;
+    filter: unset!important;
+} 
+
+
+
+
+.prescroll .nav-bar {
+background-color: var(--color-white);
+}
+
+
+
+/* .nav-bar:hover { 
+    background-color: var(--color-black);
+} */
+
+
+ .scrolling-down .nav-bar {
+    transform: translateY(-100%);
+}
+
+/* If nav scrolled up (or burger button clciked) */
+.scrolling-up .nav-bar {
+    transform: translateY(0);
+    background-color: var(--color-black);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* If burger button clciked */
+.nav-on .nav-bar {
+    transform: translateY(0);
+    background-color: var(--color-white);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+.nav-on .nav-bar * { 
+ color: var(--color-offblack);
+}
+.nav-on .nav-bar .hamburger span { 
+    background-color: #000!important;
+}
+
+
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    margin-left: var(--padding-small);
+    position: relative;
+}
+
+.nav-logo img {
+    width: auto;
+    height: calc(var(--nav-height) - 30px );
+    max-height:50%;
+    display: block;
+    object-fit: contain;
+}
+
+.prescroll .hamburger span {
+    background: #000;
+ }
+
+/* Hamburger menu*/
+.hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: var(--padding);
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+}
+
+/*Styling Hamburger Icons */
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    background: var(--color-white);
+}
+
+/*Animating Hamburger Icon on Click*/
+.nav-on .hamburger span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-on .hamburger span:nth-child(2) {
+    transition: all 0.7s ease;
+    width: 0;
+}
+
+.nav-on .hamburger span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-bar-links {
+    display: none;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    .nav-logo img {
+        height: calc(var(--nav-height) - 40px );
+    }
+
+    .nav-bar-links {
+        display: block;
+        height: var(--nav-height);
+    }
+
+    .nav-bar-links li {
+        margin-left: var(--padding-small);
+        list-style: none;
+        float: left;
+    }
+
+    .nav-bar-links li a {
+        height: var(--nav-height);
+        line-height: var(--nav-height);
+        margin: 0  0 0 var(--padding-small);
+        padding: 0;
+        font-size: var(--small);
+        text-decoration: none;
+        color:var(--color-lightgrey);
+    }
+
+    .nav-bar-links li a:hover {
+        color:var(--color-white);
+    }
+
+}
+
+
+  .nav-bar-dropdown {
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    min-width: 250px;
+    top:var(--nav-height);
+    z-index: 1;
+    background-color: var(--color-offwhite);
+    color: var(--color-black);
+
+  }
+
+  .nav-bar-links > .nav-bar-dropdown-li > .nav-bar-dropdown > a { 
+    height:50px; line-height:50px;
+    border-bottom:1px solid var(--color-light);
+    margin:0 auto;
+    padding:0 var(--padding-xsmall);
+}
+
+.nav-bar-links > .nav-bar-dropdown-li > .nav-bar-dropdown > a:hover {
+color:var(--color);
+}
+  
+  .nav-bar-links li .nav-bar-dropdown a {
+    float: none;
+    /* color: white; */
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    /* background-color: #333; */
+    line-height:40px;
+    height:40px;
+    color: var(--color-black);
+  }
+  
+  
+  .nav-bar-dropdown-li:hover .nav-bar-dropdown {
+    display: block;
+  }
