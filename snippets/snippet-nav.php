@@ -13,33 +13,9 @@ if( $cta ):
     $cta_target = $cta['target'] ? $cta['target'] : '_self';
 endif;
 ?>
-<?php /*
-<div id="nav" class="prefade">
-        <nav id="nav-bar" class="nav-bar">
-            <a href="https://www.ladsholidayguide.com" class="nav-logo" title="Lads Holiday Guide Logo">
-                <img src="https://i0.wp.com/www.ladsholidayguide.com/wp-content/uploads/g-logo.png?h=50&ssl=1"
-                    alt="Lads Holiday Guide Logo" class="prefade">
-            </a>
-            <ul class="nav-bar-links prefade">
-                <li><a class="post-edit-link"
-                        href="https://www.ladsholidayguide.com/wp-admin/post.php?post=10271&#038;action=edit">Edit</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav><!-- close top navbar navigation -->
-        <div class="nav-menu bg-offblack">
-            <!-- megamenu which appears when burger clicked -->
-            <div id="nav-menu-cloned" class="nav-menu-inner">
-            </div><!-- nav-menu-inner -->
-        </div><!-- nav-menu -->
-    </div><!-- #nav -->
-*/ ?>
 <?php 
-$logo_url = get_field('nav_logo','options'); $logo_short_url = substr($logo_url, 8); 
+$logo_url = get_field('nav_logo','options'); 
+$logo_short_url = substr($logo_url, 8); 
 $logo_jetpack_url = "https://i0.wp.com/".$logo_short_url . "?h=80";
 ?>
 <div id="nav" class="nav">
@@ -47,8 +23,9 @@ $logo_jetpack_url = "https://i0.wp.com/".$logo_short_url . "?h=80";
         <?php if ($logo_url) { ?>
         <a href="<?php echo esc_html(get_home_url()); ?>" class="nav-logo prefade"
             title="<?php echo esc_html(get_bloginfo('name')); ?> Logo">
-            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="<?php echo esc_attr($logo_jetpack_url); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>"
-                class="prefade lazyload" loading="eager">
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="<?php echo esc_attr($logo_jetpack_url); ?>"
+                alt="<?php echo esc_attr(get_bloginfo('name')); ?>" class="prefade lazyload" loading="eager">
         </a>
         <?php } else { echo esc_html(get_bloginfo('name')); } //$logo_url ?>
         <ul class="nav-bar-links prefade">
@@ -68,9 +45,7 @@ $logo_jetpack_url = "https://i0.wp.com/".$logo_short_url . "?h=80";
                 </a>
             </li>
             <?php } ?>
-            <?php
-// kept above li tag open to now include this.
-if(have_rows('subnav_links')): ?>
+            <?php if(have_rows('subnav_links')): ?>
             <div class="nav-bar-dropdown">
                 <?php while (have_rows('subnav_links')) : the_row(); $subnavLink  = get_sub_field('subnav_link');  ?>
                 <a href="<?php echo $subnavLink['url']; ?>" title="<?php echo esc_attr($navLink['title']); ?>"

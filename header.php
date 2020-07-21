@@ -31,5 +31,7 @@
 </head>
 
 <body id="body" class="body prescroll">
-    <?php get_template_part( 'snippets/snippet', 'nav' ); // col-1 ?>
+    <?php if (!class_exists('ACF'))  { ?>
+        1
+    <?php } else {  echo "2"; }   ?>
     <main>
