@@ -3,7 +3,10 @@
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
 <?php if ( have_posts() ) : ?>
-<?php while ( have_posts() ) : the_post();  ?>
+<div class="bg-white row-block">
+    <div class="grid grid-gap w-max">
+
+        <?php while ( have_posts() ) : the_post();  ?>
 
 <?php
 $category = get_the_category();
@@ -14,13 +17,8 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-
-<div class="bg-white">
-    <div class="grid grid-gap w-max">
-
-        <?php $i++; if($i <= 1 ) : ?>
         <article class="teaser teaser_standard bg-white colspan-7">
-
+            <?php $i++; if($i <= 1 ) : ?>
             <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
                 value="Learn how to clean shave">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
@@ -40,16 +38,11 @@ $feature_youtube = get_field('feature_youtube');
                     <p>Want to learn how to clean shave?</p>
                 </header>
             </a>
-
+            <?php endif; ?>
         </article>
-        <?php endif; ?>
-
 
         <div class="puff_teasers colspan-5 bg-white">
-
-
             <?php if($i >=2 && $i <=5) :?>
-
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser bg-white">
                 <figure>
@@ -67,10 +60,9 @@ $feature_youtube = get_field('feature_youtube');
                     <h6 class="headline"><?php echo $headline; ?></h6>
                 </header>
             </a>
+            <?php endif; // $i >=2 && $i <=5) ?>
+        </div><!-- puff_teasers -->
 
-            <?php endif; ?>
-        </div>
-       
     </div>
 </div>
 <?php endwhile; ?>
