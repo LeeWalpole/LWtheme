@@ -52,9 +52,19 @@ $feature_youtube = get_field('feature_youtube');
             <?php endif; // first post ?>
             <?php endforeach; ?>
         </article>
-
+        <?php endif; // have_posts ?>
         <?php rewind_posts(); ?>
 
+
+<?php
+global $post;
+$myposts = get_posts( array( 
+'posts_per_page' => $teaser_count,
+'no_found_rows'  => true, 
+'offset' => 0, 
+'tag_id' => $teaser_tag, 
+'category' => $teaser_category ) ); 
+if ( $myposts ) : ?>
         <div class="puff_teasers colspan-5 bg-white">
         <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
             <?php
@@ -65,7 +75,9 @@ $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
-            <?php $i++; if($i <= 1 && $i <=5) : ?>
+
+            <?php $i++; if($i >= 1 && $i <=5) : ?>
+
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
                 <figure>
@@ -88,9 +100,7 @@ $feature_youtube = get_field('feature_youtube');
 </div>
 <!-- end have posts below -->
 <?php endif; // have_posts ?>
-
 <?php rewind_posts(); ?>
-
 
 <div class="bg-offwhite row-block">
     <form class="category-search w-max" role="search" aria-label="On this page">
@@ -99,7 +109,15 @@ $feature_youtube = get_field('feature_youtube');
     </form>
 </div>
 
-
+<?php
+global $post;
+$myposts = get_posts( array( 
+'posts_per_page' => $teaser_count,
+'no_found_rows'  => true, 
+'offset' => 0, 
+'tag_id' => $teaser_tag, 
+'category' => $teaser_category ) ); 
+if ( $myposts ) : ?>
 <div class="bg-offwhite row-block">
     <div class="w-max grid grid-gap padding-x teasers standard_teasers">
 
@@ -135,9 +153,7 @@ $feature_youtube = get_field('feature_youtube');
                 </header>
             </a>
         </article>
-
         <?php endforeach; ?>
-
     </div>
 </div>
-
+<?php endif; // have_posts ?>
