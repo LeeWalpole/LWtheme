@@ -3,10 +3,11 @@
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
 <?php if ( have_posts() ) : ?>
+<?php while ( have_posts() ) : the_post();  ?>
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
 
-        <?php while ( have_posts() ) : the_post();  ?>
+       
 
 <?php
 $category = get_the_category();
@@ -62,10 +63,10 @@ $feature_youtube = get_field('feature_youtube');
             </a>
             <?php endif; // $i >=2 && $i <=5) ?>
         </div><!-- puff_teasers -->
-        <?php endwhile; ?>
+  
     </div>
 </div>
-
+<?php endwhile; ?>
 <?php endif; ?>
 
 
