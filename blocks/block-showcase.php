@@ -4,22 +4,24 @@ $teaser_category = get_sub_field('category');
 $teaser_tag = get_sub_field('tag');
 $category_link = get_category_link( $teaser_category);
 $offset = 0;
+$layout = get_sub_field('layout');
+$showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 ?>
 
-<?php
-global $post;
-$myposts = get_posts( array( 
-'posts_per_page' => $teaser_count,
-'no_found_rows'  => true, 
-'offset' => 0, 
+<?php 
+$posts = get_posts(array(
+'post_type'			=> 'post',
+'posts_per_page' => 1,
+'offset' => 0,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
-if ( $myposts ) : ?>
+if( $posts ): ?>
+
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
         <article class="teaser standard_teaser bg-white colspan-7">
 
-            <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -53,7 +55,8 @@ $feature_youtube = get_field('feature_youtube');
             <?php endforeach; ?>
         </article>
         <?php endif; // have_posts ?>
-        <?php rewind_posts(); ?>
+
+        <?php wp_reset_postdata(); ?>
 
 <?php 
 $posts = get_posts(array(
@@ -96,8 +99,12 @@ $feature_youtube = get_field('feature_youtube');
 </div>
 <!-- end have posts below -->
 <?php endif; // have_posts ?>
-<?php rewind_posts(); ?>
 
+<?php wp_reset_postdata(); ?>
+
+
+<?php if ($showcase == "showcase_all" || "showcase_limit")  { ?>
+<!-- Showcase ALL -->
 <div class="bg-offwhite row-block">
     <form class="category-search w-max" role="search" aria-label="On this page">
         <input placeholder="Search articles..." autofocus type="search" name="type" class="type" maxlength="89"
@@ -105,19 +112,18 @@ $feature_youtube = get_field('feature_youtube');
     </form>
 </div>
 
-<?php
-global $post;
-$myposts = get_posts( array( 
-'posts_per_page' => $teaser_count,
-'no_found_rows'  => true, 
-'offset' => 0, 
+<?php 
+$posts = get_posts(array(
+'post_type'			=> 'post',
+'posts_per_page' => $showcase_limit,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
-if ( $myposts ) : ?>
+if( $posts ): ?>
+
 <div class="bg-offwhite row-block">
     <div class="w-max grid grid-gap padding-x teasers standard_teasers">
 
-        <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
 
         <?php
 $category = get_the_category();
@@ -153,3 +159,8 @@ $feature_youtube = get_field('feature_youtube');
     </div>
 </div>
 <?php endif; // have_posts ?>
+<?php } else  { ?>
+<!-- Showcase 5 Only -->
+<?php } // $showcase == "showcase_all" || "showcase_limit")  ?>
+
+<?php wp_reset_postdata(); ?>
