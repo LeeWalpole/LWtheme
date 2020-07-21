@@ -55,3 +55,13 @@ $hero_subdeck = get_field('hero_subdeck'); // for some reason this didn't work
         </header>
     </section>
 </div>
+
+<?php 
+$fields = get_fields();
+if( $fields ): ?>
+    <ul>
+        <?php foreach( $fields as $name => $value ): ?>
+            <li><b><?php echo $name; ?></b> <?php echo $value; ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
