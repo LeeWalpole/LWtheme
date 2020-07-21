@@ -19,7 +19,7 @@ if ( $myposts ) : ?>
     <div class="grid grid-gap w-max">
         <article class="teaser standard_teaser bg-white colspan-7">
 
-            <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+            <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -56,7 +56,7 @@ $feature_youtube = get_field('feature_youtube');
         <?php rewind_posts(); ?>
 
         <div class="puff_teasers colspan-5 bg-white">
-        <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -65,7 +65,7 @@ $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
-            <?php if($i >=2 && $i <=5) :?>
+            <?php $i++; if($i <= 1 && $i <=5) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
                 <figure>
@@ -103,7 +103,7 @@ $feature_youtube = get_field('feature_youtube');
 <div class="bg-offwhite row-block">
     <div class="w-max grid grid-gap padding-x teasers standard_teasers">
 
-    <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+    <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
         <?php
 $category = get_the_category();
