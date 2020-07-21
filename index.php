@@ -40,8 +40,12 @@ $feature_youtube = get_field('feature_youtube');
             </a>
         </article>
         <?php endif; // first post ?>
-        
+        <?php endwhile; ?>
+
+        <?php rewind_posts(); ?>
+
         <div class="puff_teasers colspan-5 bg-white">
+            <?php while ( have_posts() ) : the_post(); ?>
             <?php if( $wp_query->current_post  >= 1 ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser bg-white">
