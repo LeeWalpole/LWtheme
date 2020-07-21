@@ -4,6 +4,10 @@
     margin-bottom: var(--padding);
 }
 
+.standard_teaser.teaser:last-child {
+    margin-bottom: 0;
+}
+
 .standard_teaser .header {
     padding: var(--padding);
 }
@@ -35,6 +39,10 @@
         grid-template-columns: 1fr  1fr 1fr!important;
         padding:0 var(--padding);
     } 
+
+    .standard_teaser.teaser {
+        margin-bottom: 0;
+    }
     
 
 

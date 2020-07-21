@@ -9,6 +9,16 @@
     
 }
 
+/* .teaser { 
+
+    transition: ease all .33s;
+}
+
+.teaser:hover { 
+     box-shadow: 4px 4px 14px 0 rgba(3,3,3,.06); 
+}
+
+ */
 
 .teaser .header > * { 
 transition: ease all .33s;
