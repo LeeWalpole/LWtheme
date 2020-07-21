@@ -24,6 +24,9 @@
 <?php } elseif( get_row_layout() == 'icons' ) { ?>
 <?php get_template_part( 'blocks/block-icons' ); ?>
 
+<?php } elseif( get_row_layout() == 'showcase' ) { ?>
+<?php get_template_part( 'blocks/block-showcase' ); ?>
+
 <?php } else {  
   //  relax();
     }  // end get_row_layout and do nothing ?>
