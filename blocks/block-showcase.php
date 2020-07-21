@@ -55,18 +55,17 @@ $feature_youtube = get_field('feature_youtube');
         <?php endif; // have_posts ?>
         <?php rewind_posts(); ?>
 
-
-    <?php
-global $post;
-$myposts = get_posts( array( 
+<?php 
+$posts = get_posts(array(
+'post_type'			=> 'post',
 'posts_per_page' => 4,
-'no_found_rows'  => true, 
-'offset' => 1, 
+'offset' => 1,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
-if ( $myposts ) : ?>
+if( $posts ): ?>
+
         <div class="puff_teasers colspan-5 bg-white">
-            <?php $i=0; foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
