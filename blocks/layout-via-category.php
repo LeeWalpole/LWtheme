@@ -16,14 +16,11 @@ $category_link = get_category_link( $teaser_category);
     if ( $myposts ) : ?>
 
 
-<div class="w-max news-block">
-    <div class="news-block-feature">
-        <header class="header">
-            <h2 class="headline">LATEST</h2>
-        </header>
-        <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+<div class="bg-white row-block">
+    <div class="grid grid-gap w-max showcase">
+    <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
-        <?php
+<?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
@@ -32,12 +29,12 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-        <?php $i++; if($i <= 1 ) : ?>
-        <article class="teaser teaser_standard bg-white">
-            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
-                value="<?php echo esc_attr($headline); ?>">
-
-                <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>" data-ratio="16x9">
+<?php $i++; if($i <= 1 ) : ?>
+        <article class="teaser standard_teaser bg-white colspan-7">
+        <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
+                value="Learn how to clean shave">
+                <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
+                    data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
                             srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
@@ -50,13 +47,12 @@ $feature_youtube = get_field('feature_youtube');
                 <header class="header bg-white postfade">
                     <strong class="kicker"><?php echo $kicker; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
-                    <?php if ($subdeck) : ?><p><?php echo $subdeck; ?></p><?php endif; ?>
+                    <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
                 </header>
             </a>
         </article>
-    </div><!-- puff bg-white1 -->
+    </div>
     <?php endif; ?>
-
     <?php if($i >=2 && $i <=5) :?>
 
     <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
@@ -80,10 +76,5 @@ $feature_youtube = get_field('feature_youtube');
     <?php endif; ?>
 
     <?php endforeach; ?>
-
-    <a href="<?php echo esc_attr($category_link); ?>" class="more">MORE › &#8250;</a>
-
 </div>
-
-
 <?php endif; ?>
