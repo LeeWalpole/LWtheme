@@ -4,8 +4,8 @@
     <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
     <?php if ( have_posts() ) : ?>
-    <div class="w-max news-block">
-        <div class="news-block-feature grid grid-gap w-max">
+    <div class="w-max">
+        <div class="grid grid-gap w-max">
             <!-- <header class="header">
                 <h2 class="headline">LATEST</h2>
             </header> -->
