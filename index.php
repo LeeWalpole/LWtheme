@@ -4,7 +4,7 @@
 
 <?php if ( have_posts() ) : ?>
 <div class="bg-white row-block">
-    <div class="grid grid-gap w-max showcase">
+    <div class="grid grid-gap w-max">
         <article class="teaser standard_teaser bg-white colspan-7">
 
             <?php while ( have_posts() ) : the_post();  ?>
@@ -139,10 +139,6 @@ $feature_youtube = get_field('feature_youtube');
 <?php endif; ?>
 <?php endwhile; endif; ?>
 
-<div class="row-block bg-color">
-    <aside class="shares w-safe">
-        <p>Email sign-up</p>
-    </aside>
-</div>
+<?php get_template_part( 'snippets/newsletter' ); ?>
 
 <?php get_footer();  ?>
