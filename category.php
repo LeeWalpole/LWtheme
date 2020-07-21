@@ -20,7 +20,7 @@ $category_link = get_category_link( $teaser_category);
             </header> -->
             <?php while ( have_posts() ) : the_post();  ?>
 
-<?php
+            <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
@@ -79,15 +79,22 @@ $feature_youtube = get_field('feature_youtube');
 
         <?php endwhile; ?>
 
-        <a href="<?php echo esc_attr($category_link); ?>" class="more">MORE › &#8250;</a>
-
     </div>
 
-    <div class="w-max grid grid-gap">
+
+    <div class="bg-offwhite row-block">
+        <form class="category-search w-max" role="search" aria-label="On this page">
+            <input placeholder="Search articles..." autofocus type="search" name="type" class="type" maxlength="89"
+                onkeyup="filter(this)" />
+        </form>
+    </div>
+
+
+    <div class="w-max grid grid-gap teasers">
 
         <?php while ( have_posts() ) : the_post();  ?>
 
-<?php
+        <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
@@ -102,7 +109,7 @@ $feature_youtube = get_field('feature_youtube');
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 value="<?php echo esc_attr($headline); ?>">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
-                    data-ratio="16x9">
+                    data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
                             srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
@@ -112,7 +119,7 @@ $feature_youtube = get_field('feature_youtube');
                             alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
                 </figure>
-                <header class="header bg-white postfade">
+                <header class="header bg-white prefade">
                     <strong class="kicker"><?php echo $kicker; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if ($subdeck) : ?><p><?php echo $subdeck; ?></p><?php endif; ?>
@@ -127,7 +134,6 @@ $feature_youtube = get_field('feature_youtube');
     </div>
 
     <?php endif; // (have posts) ?>
-
 
 
 

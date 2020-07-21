@@ -1,13 +1,13 @@
-.video_teaser {
+.video_teaser img {
 position: relative;
 height:100%; width:100%;
 }
 
-.video_teaser:after {
+.video_teaser picture:after {
     width: 33%;
     height: 33%;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     left: 0;
     right: 0;
     top: 0;

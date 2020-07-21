@@ -51,7 +51,7 @@
         }
 
         .row-block {
-            padding: var(--padding-small) 0 !important;
+            padding: var(--padding) 0 !important;
             display: block;
         }
 
@@ -69,4 +69,9 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+        }
+
+        .padding-x { 
+            padding-left:var(--padding);
+            padding-right:var(--padding);
         }
