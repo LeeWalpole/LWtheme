@@ -1,4 +1,4 @@
-<?php get_header(); // includes nav and hero ?>
+<?php get_header(); // includes nav and hero and main ?>
 
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
@@ -69,8 +69,8 @@ $feature_youtube = get_field('feature_youtube');
             </a>
 
             <?php endif; ?>
-            <?php endwhile; ?>
         </div>
+        <?php endwhile; ?>
     </div>
 </div>
 
@@ -126,8 +126,6 @@ $feature_youtube = get_field('feature_youtube');
     </div>
 </div>
 <?php endif; // (have posts) ?>
-
-</div><!-- root -->
 
 
 <?php if ( have_posts() ) :  while ( have_posts() ) : the_post();  ?>
