@@ -62,10 +62,10 @@ $feature_youtube = get_field('feature_youtube');
             </a>
             <?php endif; // $i >=2 && $i <=5) ?>
         </div><!-- puff_teasers -->
-
+        <?php endwhile; ?>
     </div>
 </div>
-<?php endwhile; ?>
+
 <?php endif; ?>
 
 
