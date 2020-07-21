@@ -31,10 +31,5 @@
 </head>
 
 <body id="body" class="body prescroll">
-    <?php if (!class_exists('ACF'))  { // if ACF is not installed ?>
-        <!-- Install ACF Pro to get nav working -->
-    <?php } else { ?>
-        <!-- ACF installed, now pull in Nav -->
-        <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
-    <?php } ?>
+    <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
