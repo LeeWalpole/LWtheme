@@ -45,7 +45,7 @@ $feature_youtube = get_field('feature_youtube');
 
         <div class="puff_teasers colspan-5 bg-white">
             <?php while ( have_posts() ) : the_post(); ?>
-            <?php if( $wp_query->current_post  >= 1 ) : ?>
+            <?php if( $wp_query->current_post  >= 1  && $wp_query->current_post  <= 4  ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser bg-white">
                 <figure>
@@ -69,7 +69,7 @@ $feature_youtube = get_field('feature_youtube');
     </div>
 </div>
 
-<?php endif; ?>
+<?php endif; // have_posts ?>
 
 
 <div class="bg-offwhite row-block">
