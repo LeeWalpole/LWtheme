@@ -4,8 +4,8 @@
 
 <?php if ( have_posts() ) : ?>
 <div class="bg-white row-block">
-    <div class="grid grid-gap w-max">
-        <article class="teaser teaser_standard bg-white colspan-7">
+    <div class="grid grid-gap w-max showcase">
+        <article class="teaser standard_teaser bg-white colspan-7">
 
             <?php while ( have_posts() ) : the_post();  ?>
             <?php
@@ -89,7 +89,7 @@ $feature_youtube = get_field('feature_youtube');
 
 <?php if ( have_posts() ) : ?>
 <div class="bg-offwhite row-block">
-    <div class="w-max grid grid-gap padding-x teasers">
+    <div class="w-max grid grid-gap padding-x teasers standard_teasers">
 
         <?php while ( have_posts() ) : the_post();  ?>
 
@@ -102,7 +102,7 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-        <article class="teaser teaser_standard bg-white colspan-4">
+        <article class="teaser standard_teaser bg-white">
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 value="<?php echo esc_attr($headline); ?>">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"

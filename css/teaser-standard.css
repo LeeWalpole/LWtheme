@@ -1,21 +1,26 @@
-.teaser_standard {
-    padding: 0 var(--padding);
-}
 
-.teaser_standard.teaser {
+
+.standard_teaser.teaser {
     margin-bottom: var(--padding);
 }
 
-.teaser_standard .header {
+.standard_teaser .header {
     padding: var(--padding);
 }
+
+.standard_teaser .headline {
+    font-weight:var(--bold);
+}
+
+
 
 .standard_teasers {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: var(--padding);
-    padding: var(--padding);
-}
+    padding:0 var(--padding);
+
+} 
+
 
 @media only screen and (min-width : 768px) {
     .with-side .standard_teasers {
@@ -27,9 +32,12 @@
 
     .standard_teasers {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: var(--padding);
-        padding: var(--padding);
-    }
+        grid-template-columns: 1fr  1fr 1fr!important;
+        padding:0 var(--padding);
+    } 
+    
+
+
+
 
 }
