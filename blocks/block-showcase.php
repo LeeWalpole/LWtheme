@@ -57,7 +57,6 @@ $feature_youtube = get_field('feature_youtube');
 
         <div class="puff_teasers colspan-5 bg-white">
         <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-            <?php if($i >=2 && $i <=5) :?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -66,6 +65,7 @@ $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
+            <?php if($i >=2 && $i <=5) :?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
                 <figure>
