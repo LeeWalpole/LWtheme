@@ -55,22 +55,3 @@ $hero_subdeck = get_field('hero_subdeck'); // for some reason this didn't work
         </header>
     </section>
 </div>
-
-<?php 
-$fields = get_fields();
-if( $fields ): ?>
-    <ul>
-        <?php foreach( $fields as $name => $value ): ?>
-            <li><b><?php echo $name; ?></b> <?php echo $value; ?>
-        <b> <?php echo $field['key']; ?></b></li>
-        <?php endforeach; ?>
-    </ul>
-
-    <h1>Kikcef:<?php echo $hero_kicker ?></h1>
-
-<?php endif; ?>
-
-<?php
-$field = get_field_object('hero_kicker');
-?>
-<p>Kikcer 2<?php echo $field; ?></p>
