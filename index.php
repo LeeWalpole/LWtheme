@@ -1,5 +1,7 @@
 <?php get_header(); // includes nav and hero ?>
 
+<?php get_template_part( 'snippets/snippet-hero' ); ?>
+
 <?php if ( have_posts() ) : ?>
 <div class="bg-color">
     <div class="grid grid-gap w-max">
@@ -38,8 +40,9 @@ $feature_youtube = get_field('feature_youtube');
                     <p>Want to learn how to clean shave?</p>
                 </header>
             </a>
-            <?php endif; ?>
+           
         </article>
+        <?php endif; ?>
 
 
         <div class="puff_teasers colspan-5 bg-white">
@@ -66,7 +69,7 @@ $feature_youtube = get_field('feature_youtube');
             </a>
 
             <?php endif; ?>
-        <?php endwhile; ?>
+            <?php endwhile; ?>
         </div>
     </div>
 </div>
