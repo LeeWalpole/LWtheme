@@ -3,7 +3,6 @@ $teaser_count = -1;
 $teaser_category = get_sub_field('category');
 $teaser_tag = get_sub_field('tag');
 $category_link = get_category_link( $teaser_category);
-$offset = 0;
 ?>
 
 <?php
@@ -21,16 +20,16 @@ $offset = 0;
     <div class="grid grid-gap w-max showcase">
     <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
-    <?php
-        $category = get_the_category();
-        $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
-        $headline = get_field('hero_headline') ?: get_the_title(); 
-        $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-        $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
-        $feature_youtube = get_field('feature_youtube'); 
-        ?>
+<?php
+$category = get_the_category();
+$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+$headline = get_field('hero_headline') ?: get_the_title(); 
+$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+$feature_youtube = get_field('feature_youtube'); 
+?>
 
-    <?php $i++; if($i <= 1 ) : ?>
+<?php $i++; if($i <= 1 ) : ?>
         <article class="teaser standard_teaser bg-white colspan-7">
         <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
                 value="Learn how to clean shave">
@@ -52,9 +51,10 @@ $offset = 0;
                 </header>
             </a>
         </article>
-        <?php endif; ?>
     </div>
+    <?php endif; ?>
     <?php if($i >=2 && $i <=5) :?>
+
     <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
         class="puff bg-white">
         <figure class="<?php if ($feature_youtube) : echo "video_teaser"; endif; ?>">
@@ -72,7 +72,9 @@ $offset = 0;
             <h6 class="headline"><?php echo $headline; ?></h6>
         </header>
     </a>
+
     <?php endif; ?>
+
     <?php endforeach; ?>
 </div>
 <?php endif; ?>
