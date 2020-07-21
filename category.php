@@ -4,13 +4,13 @@
     <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
     <?php     
+/*
 $teaser_count = -1;
 $teaser_category = get_sub_field('category');
 $teaser_tag = get_sub_field('tag');
 $category_link = get_category_link( $teaser_category);
+*/
 ?>
-
-
 
     <?php if ( have_posts() ) : ?>
     <div class="w-max news-block">
@@ -20,7 +20,7 @@ $category_link = get_category_link( $teaser_category);
             </header> -->
             <?php while ( have_posts() ) : the_post();  ?>
 
-            <?php
+<?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
@@ -83,11 +83,20 @@ $feature_youtube = get_field('feature_youtube');
 
     </div>
 
-    <?php while ( have_posts() ) : the_post();  ?>
+    <div class="w-max grid grid-gap">
 
-    <?php if($i >=6) : ?>
+        <?php while ( have_posts() ) : the_post();  ?>
 
-    <section class="w-max grid grid-gap">
+<?php
+$category = get_the_category();
+$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+$headline = get_field('hero_headline') ?: get_the_title(); 
+$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+$feature_youtube = get_field('feature_youtube'); 
+?>
+
+        <?php if($i >=6) : ?>
 
         <article class="teaser teaser_standard bg-white colspan-4">
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
@@ -111,11 +120,11 @@ $feature_youtube = get_field('feature_youtube');
             </a>
         </article>
 
-    </section>
+        <?php endif; ?>
 
-    <?php endif; ?>
+        <?php endwhile; ?>
 
-    <?php endwhile; ?>
+    </div>
 
     <?php endif; // (have posts) ?>
 
