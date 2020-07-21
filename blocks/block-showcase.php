@@ -6,6 +6,8 @@ $category_link = get_category_link( $teaser_category);
 $offset = 0;
 ?>
 
+<h1>HELLO</h1>
+
 <?php
 global $post;
 $myposts = get_posts( array( 
