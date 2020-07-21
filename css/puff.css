@@ -1,21 +1,26 @@
 
 .puff {
     position: relative;
-    height: var(--puff-height);
+    /* height: var(--puff-height); */
     width: 100%;
     color: inherit;
 }
 
 
 .puff figure {
-    height: var(--puff-height);
+    /* height: var(--puff-height); */
     width: var(--puff-width);
-    position: absolute;
+    min-height:100%;
+    position: relative;
     top: 0;
     left: 0;
     overflow: hidden;
-
     z-index: 2;
+}
+
+.puff figure img { 
+    width: var(--puff-width);
+    height:auto;
 }
 
 .puff header {

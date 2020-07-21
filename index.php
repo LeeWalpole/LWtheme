@@ -5,7 +5,7 @@
 
     <?php if ( have_posts() ) : ?>
     <div class="w-max news-block">
-        <div class="news-block-feature">
+        <div class="news-block-feature grid grid-gap w-max">
             <!-- <header class="header">
                 <h2 class="headline">LATEST</h2>
             </header> -->
@@ -21,12 +21,12 @@ $feature_youtube = get_field('feature_youtube');
 ?>
 
             <?php $i++; if($i <= 1 ) : ?>
-            <article class="teaser teaser_standard bg-white">
+            <article class="teaser teaser_standard bg-white colspan-7">
                 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                     value="<?php echo esc_attr($headline); ?>">
 
                     <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
-                        data-ratio="16x9">
+                        data-ratio="3x2">
                         <picture>
                             <source type="image/jpeg" media="(min-width: 461px)"
                                 srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
@@ -46,29 +46,32 @@ $feature_youtube = get_field('feature_youtube');
         </div><!-- puff bg-white1 -->
         <?php endif; ?>
 
-        <?php if($i >=2 && $i <=5) :?>
+        <div class="puff_teasers colspan-5 bg-white">
 
-        <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
-            class="puff bg-white">
-            <figure class="<?php if ($feature_youtube) : echo "video_teaser"; endif; ?>">
-                <picture>
-                    <source type="image/jpeg" media="(min-width: 461px)"
-                        srcset="<?php echo esc_attr($teaser_image_url); ?>">
-                    <source type="image/jpeg" media="(max-width: 460px)"
-                        srcset="<?php echo esc_attr($teaser_image_url); ?>">
-                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                        alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
-                </picture>
-            </figure>
-            <header class="header">
-                <strong class="kicker"><?php echo $kicker; ?></strong>
-                <h6 class="headline"><?php echo $headline; ?></h6>
-            </header>
-        </a>
+            <?php if($i >=2 && $i <=5) :?>
 
-        <?php endif; ?>
+            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
+                class="puff_teaser bg-white">
+                <figure class="<?php if ($feature_youtube) : echo "video_teaser"; endif; ?>">
+                    <picture>
+                        <source type="image/jpeg" media="(min-width: 461px)"
+                            srcset="<?php echo esc_attr($teaser_image_url); ?>">
+                        <source type="image/jpeg" media="(max-width: 460px)"
+                            srcset="<?php echo esc_attr($teaser_image_url); ?>">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                            alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
+                    </picture>
+                </figure>
+                <header class="header">
+                    <strong class="kicker"><?php echo $kicker; ?></strong>
+                    <h6 class="headline"><?php echo $headline; ?></h6>
+                </header>
+            </a>
 
-        <?php endwhile; ?>
+            <?php endif; ?>
+            <?php endwhile; ?>
+
+        </div>
 
     </div>
     <?php endif; ?>

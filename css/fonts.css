@@ -8,7 +8,7 @@
     --article-headline-line: 1.6;
     --teaser-headline: calc(var(--p) + 20%);
     --teaser-headline-line: 1.2;
-    --kicker: var(--xsmall);
+    --kicker: calc(var(--p) - 35%);
 }
 
 @media (min-width:768px) {
@@ -22,7 +22,7 @@
         --article-headline-line: 1.2;
         --teaser-headline: calc(var(--p) + 20%);
         --teaser-headline-line: 1.2;
-        --kicker: var(--xsmall);
+        --kicker: calc(var(--p) - 35%);
     }
 }
 
