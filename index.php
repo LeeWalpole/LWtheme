@@ -52,7 +52,7 @@ $feature_youtube = get_field('feature_youtube');
 
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser bg-white">
-                <figure class="<?php if ($feature_youtube) : echo "video_teaser"; endif; ?>">
+                <figure>
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
                             srcset="<?php echo esc_attr($teaser_image_url); ?>">
