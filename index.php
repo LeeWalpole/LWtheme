@@ -7,9 +7,11 @@
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
 
-       
 
-<?php
+
+
+
+        <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
@@ -18,8 +20,9 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
+
+        <?php if( $wp_query->current_post  <= 1 ) : ?>
         <article class="teaser teaser_standard bg-white colspan-7">
-            <?php $i++; if($i <= 1 ) : ?>
             <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
                 value="Learn how to clean shave">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
@@ -39,11 +42,11 @@ $feature_youtube = get_field('feature_youtube');
                     <p>Want to learn how to clean shave?</p>
                 </header>
             </a>
-            <?php endif; ?>
         </article>
-
+        <?php endif; // first post ?>
+        
         <div class="puff_teasers colspan-5 bg-white">
-            <?php if($i >=2 && $i <=5) :?>
+            <?php if( $wp_query->current_post  >= 1 ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser bg-white">
                 <figure>
@@ -61,9 +64,9 @@ $feature_youtube = get_field('feature_youtube');
                     <h6 class="headline"><?php echo $headline; ?></h6>
                 </header>
             </a>
-            <?php endif; // $i >=2 && $i <=5) ?>
+            <?php endif; // posts 2+ ?>
         </div><!-- puff_teasers -->
-  
+
     </div>
 </div>
 <?php endwhile; ?>
