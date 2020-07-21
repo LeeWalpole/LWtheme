@@ -58,7 +58,7 @@ $feature_youtube = get_field('feature_youtube');
 
         <?php wp_reset_postdata(); ?>
 
-<?php 
+        <?php 
 $posts = get_posts(array(
 'post_type'			=> 'post',
 'posts_per_page' => 4,
@@ -103,7 +103,7 @@ $feature_youtube = get_field('feature_youtube');
 <?php wp_reset_postdata(); ?>
 
 
-<?php if ($showcase == "showcase_all" || "showcase_limit")  { ?>
+<?php if ($layout == "showcase_all" || $layout == "showcase_limit")  { ?>
 <!-- Showcase ALL -->
 <div class="bg-offwhite row-block">
     <form class="category-search w-max" role="search" aria-label="On this page">
