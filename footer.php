@@ -81,6 +81,8 @@ function filter(e){
 } // search articles
 </script>
 
+<?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.
+
 </body>
 
 </html>
