@@ -3,12 +3,9 @@
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
 <?php if ( have_posts() ) : ?>
-<div class="bg-white">
-    <div class="grid grid-gap w-max">
+<?php while ( have_posts() ) : the_post();  ?>
 
-        <?php while ( have_posts() ) : the_post();  ?>
-
-        <?php
+<?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
@@ -17,8 +14,11 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-        <?php $i++; if($i <= 1 ) : ?>
 
+<div class="bg-white">
+    <div class="grid grid-gap w-max">
+
+        <?php $i++; if($i <= 1 ) : ?>
         <article class="teaser teaser_standard bg-white colspan-7">
 
             <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
@@ -70,10 +70,10 @@ $feature_youtube = get_field('feature_youtube');
 
             <?php endif; ?>
         </div>
-        <?php endwhile; ?>
+       
     </div>
 </div>
-
+<?php endwhile; ?>
 <?php endif; ?>
 
 
