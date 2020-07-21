@@ -5,7 +5,6 @@
 <?php if ( have_posts() ) : ?>
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
-
         <article class="teaser teaser_standard bg-white colspan-7">
 
             <?php while ( have_posts() ) : the_post();  ?>
@@ -45,6 +44,14 @@ $feature_youtube = get_field('feature_youtube');
 
         <div class="puff_teasers colspan-5 bg-white">
             <?php while ( have_posts() ) : the_post(); ?>
+            <?php
+$category = get_the_category();
+$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+$headline = get_field('hero_headline') ?: get_the_title(); 
+$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+$feature_youtube = get_field('feature_youtube'); 
+?>
             <?php if( $wp_query->current_post  >= 1  && $wp_query->current_post  <= 4  ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser bg-white">
@@ -64,12 +71,16 @@ $feature_youtube = get_field('feature_youtube');
                 </header>
             </a>
             <?php endif; // posts 2+ ?>
+            <!-- endwhile below -->
             <?php endwhile; ?>
+                        <!-- endwhile above -->
         </div><!-- puff_teasers -->
     </div>
 </div>
-
+          <!-- end have posts below -->
 <?php endif; // have_posts ?>
+
+
 
 
 <div class="bg-offwhite row-block">
