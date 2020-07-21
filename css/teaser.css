@@ -9,6 +9,25 @@
     
 }
 
+.showcase_header { 
+    padding:0!important;
+    margin:0 0 var(--padding) 0!important;
+    display: block;
+    font-size:calc(var(--teaser-headline) * 1.5 );
+    font-weight:var(--bold);
+    text-transform: uppercase;
+
+}    
+
+.showcase_header * { 
+    margin-right:var(--padding-small);
+    display:inline-block;
+}
+
+.showcase_header a:hover { 
+    color:var(--color);
+}
+
 /* .teaser { 
 
     transition: ease all .33s;

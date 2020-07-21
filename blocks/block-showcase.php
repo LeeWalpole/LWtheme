@@ -1,11 +1,12 @@
 <?php     
 $teaser_count = -1;
-$teaser_category = get_sub_field('category');
+$teaser_category = get_sub_field('category') ?: "no category";
 $teaser_tag = get_sub_field('tag');
-$category_link = get_category_link( $teaser_category);
+$category_link = get_category_link( $teaser_category) ?: "#";
 $offset = 0;
 $layout = get_sub_field('layout');
 $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
+$showcase_heading = get_sub_field('showcase_heading');
 ?>
 
 <?php 
@@ -19,7 +20,18 @@ if( $posts ): ?>
 
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
+
         <article class="teaser standard_teaser bg-white colspan-7">
+
+            <?php if ($showcase_heading) : ?>
+            <header class="showcase_header header bg-white">
+                <h2 class="headline">
+                    <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
+                        <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
+                    </a>
+                </h2>
+            </header>
+            <?php endif; ?>
 
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
