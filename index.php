@@ -32,9 +32,9 @@ $feature_youtube = get_field('feature_youtube');
                     </picture>
                 </figure>
                 <header class="header bg-white postfade">
-                    <strong class="kicker">Gillette</strong>
-                    <h6 class="headline">Learn how to clean shave</h6>
-                    <p>Want to learn how to clean shave?</p>
+                    <strong class="kicker"><?php echo $kicker; ?></strong>
+                    <h6 class="headline"><?php echo $headline; ?></h6>
+                    <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
                 </header>
             </a>
             <?php endif; // first post ?>
@@ -54,15 +54,12 @@ $feature_youtube = get_field('feature_youtube');
 ?>
             <?php if( $wp_query->current_post  >= 1  && $wp_query->current_post  <= 4  ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
-                class="puff_teaser bg-white">
+                class="puff_teaser teaser bg-white">
                 <figure>
                     <picture>
-                        <source type="image/jpeg" media="(min-width: 461px)"
-                            srcset="<?php echo esc_attr($teaser_image_url); ?>">
-                        <source type="image/jpeg" media="(max-width: 460px)"
-                            srcset="<?php echo esc_attr($teaser_image_url); ?>">
+                        <source type="image/jpg" srcset="<?php echo esc_attr($teaser_image_url); ?>">
                         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                            alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
+                        alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
                 </figure>
                 <header class="header">

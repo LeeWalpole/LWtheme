@@ -14,7 +14,7 @@
     
 
 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
-        class="puff bg-white">
+        class="puff bg-white teaser">
         <figure>
             <picture>
                 <source type="image/jpeg" media="(min-width: 461px)"

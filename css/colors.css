@@ -8,10 +8,9 @@
             --color-lightgrey: #babbbc; --color-lightgrey-half: #babbbc50;
             --color-grey: #9a9b9c; --color-grey-half: #9a9b9c50;
             /* --dark-border:#babbbc50; */
-
-    
-
         }
+
+        
 
         .bg-color {
             background-color: var(--color)!important;

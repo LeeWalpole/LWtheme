@@ -28,13 +28,20 @@
     padding:0 var(--padding-small);
 }
 
+
 .puff_teaser:last-child { 
     margin-bottom: 0;
 }
 
 
 .puff_teaser figure { 
-    margin-bottom:0;
+    margin-bottom:0;    
+    height:100px;
+    width:150px;
+    overflow: hidden;
+    position:absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .puff_teaser img {
@@ -44,6 +51,7 @@
     width: var(--puff-width);
     height: var(--puff-height);
 }
+
 
 @media (min-width:768px) {
 
