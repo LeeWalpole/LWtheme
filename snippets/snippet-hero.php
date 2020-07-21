@@ -10,7 +10,7 @@ $hero_subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 
 <?php } elseif (is_page() ) { ?>
 <?php 
-$hero_kicker = get_field('hero_kicker');
+$hero_kicker = get_field('hero_kicker') ?: "";
 $hero_headline = get_field('hero_headline') ?: get_the_title(); 
 $headline = '<h1 class="headline">'.$hero_headline.'</h1>';
 $hero_subdeck = get_field('hero_subdeck'); // for some reason this didn't work
