@@ -16,8 +16,11 @@
     font-size:calc(var(--teaser-headline) * 1.5 );
     font-weight:var(--bold);
     text-transform: uppercase;
-
 }    
+
+.showcase_header a { 
+    color:var(--color-black);
+}
 
 .showcase_header * { 
     margin-right:var(--padding-small);

@@ -1,12 +1,13 @@
 <?php     
 $teaser_count = -1;
-$teaser_category = get_sub_field('category') ?: "no category";
+$teaser_category = get_sub_field('category') ?: "More like this";
 $teaser_tag = get_sub_field('tag');
-$category_link = get_category_link( $teaser_category) ?: get_category_link( $category_id);
+$category = get_the_category();
+$category_link = get_category_link( $teaser_category) ?: get_category_link( $category[0]->term_id );
 $offset = 0;
 $layout = get_sub_field('layout');
 $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
-$showcase_heading = get_sub_field('showcase_heading') ?: "RELATED";
+$showcase_heading = get_sub_field('showcase_heading') ?: "MORE LIKE THIS";
 ?>
 
 <?php 
