@@ -33,8 +33,3 @@
 <body id="body" class="body prescroll">
     <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
-
-<div><p>Menu3:</p>
-<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-</div>
-
