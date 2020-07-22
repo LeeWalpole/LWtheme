@@ -19,6 +19,11 @@ margin:0;
 padding:0;
 }    
 
+.teaser_highlight .headline { 
+    font-size:calc(var(--teaser-headline) * 1.5);
+    
+}
+
 .showcase_header h2 a { 
     color:var(--color-black);
 }

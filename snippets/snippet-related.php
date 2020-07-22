@@ -34,7 +34,7 @@ if( $posts ): ?>
         <?php endif; ?>
 
 
-        <article class="teaser standard_teaser bg-white colspan-7">
+        <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
 
         <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
