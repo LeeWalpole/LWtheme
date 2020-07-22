@@ -5,7 +5,7 @@
 <?php if ( have_posts() ) : ?>
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
-        <article class="teaser standard_teaser bg-white colspan-7">
+        <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
 
             <?php while ( have_posts() ) : the_post();  ?>
             <?php
