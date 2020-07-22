@@ -22,12 +22,6 @@ function wpdocs_theme_setup() {
     add_image_size( 'smartphone', 360, false ); // iPhone full
     add_image_size( 'tablet', 768, false ); // Tablet Full
     add_filter('img_caption_shortcode_width', '__return_false');
-    function my_cool_menu_function(){
-        register_nav_menus( array(
-          'primary' => 'Primary Navigation'
-        ));
-      }
-      add_action( 'after_setup_theme', 'my_cool_menu_function' );
     }
     include_once( 'functions/acf-options.php' );
     include_once( 'functions/postlist-thumbnails.php' );
