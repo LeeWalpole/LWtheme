@@ -2,7 +2,7 @@
 $teaser_count = -1;
 $teaser_category = get_sub_field('category') ?: "no category";
 $teaser_tag = get_sub_field('tag');
-$category_link = get_category_link( $teaser_category) ?: "#";
+$category_link = get_category_link( $teaser_category) ?: get_category_link( $category_id);
 $offset = 0;
 $layout = get_sub_field('layout');
 $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
