@@ -21,18 +21,17 @@ if( $posts ): ?>
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max showcase">
 
+        <?php if ($showcase_heading) : ?>
+        <header class="showcase_header header bg-white colspan-12">
+            <h2 class="headline">
+                <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
+                    <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
+                </a>
+            </h2>
+        </header>
+        <?php endif; ?>
+
         <article class="teaser standard_teaser bg-white colspan-7">
-
-            <?php if ($showcase_heading) : ?>
-            <header class="showcase_header header bg-white">
-                <h2 class="headline">
-                    <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
-                        <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
-                    </a>
-                </h2>
-            </header>
-            <?php endif; ?>
-
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
