@@ -42,3 +42,8 @@
 <div><p>Menu2:</p>
     <?php wp_nav_menu(); ?>
 </div>
+
+<div><p>Menu3:</p>
+<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+</div>
+

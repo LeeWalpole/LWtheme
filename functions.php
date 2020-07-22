@@ -29,11 +29,8 @@ function wpdocs_theme_setup() {
     include_once( 'functions/lazyload-images.php' );
     include_once( 'functions/read-time.php' );
     include_once( 'functions/lazyload-video.php' );
-?>
-<?php 
-wp_nav_menu(
-    array(
-        'menu' => 'Main Menu'
-    )
-);
+// This theme uses wp_nav_menu() in one location.
+register_nav_menus( array(
+    'primary' => 'Primary Menu',
+) );
 ?>
