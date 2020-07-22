@@ -85,6 +85,11 @@ function filter(e){
 <?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.
 </div>
 */ ?>
+
+<div class="bg-color row-block">
+<?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.
+</div>
+
 </body>
 
 </html>
