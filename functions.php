@@ -1,4 +1,8 @@
 <?php add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+// This theme uses wp_nav_menu() in one location.
+register_nav_menus( array(
+    'primary' => 'Primary Menu',
+) );
 function wpdocs_theme_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );    
@@ -29,8 +33,4 @@ function wpdocs_theme_setup() {
     include_once( 'functions/lazyload-images.php' );
     include_once( 'functions/read-time.php' );
     include_once( 'functions/lazyload-video.php' );
-// This theme uses wp_nav_menu() in one location.
-register_nav_menus( array(
-    'primary' => 'Primary Menu',
-) );
 ?>

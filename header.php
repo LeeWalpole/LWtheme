@@ -34,15 +34,6 @@
     <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
 
-
-    <div><p>Menu1:</p>
-    <?php wp_get_nav_menu_items(); ?>
-</div>
-
-<div><p>Menu2:</p>
-    <?php wp_nav_menu(); ?>
-</div>
-
 <div><p>Menu3:</p>
 <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 </div>
