@@ -19,7 +19,7 @@ $posts = get_posts(array(
 if( $posts ): ?>
 
 <div class="bg-white row-block">
-    <div class="grid grid-gap w-max">
+    <div class="grid grid-gap w-max showcase">
 
         <article class="teaser standard_teaser bg-white colspan-7">
 
