@@ -70,7 +70,7 @@ h6 {
     line-height: var(--teaser-headline-line);
     margin-bottom: var(--padding-small);
     font-family: var(--font1-bold);
-    letter-spacing:-.5pt;
+    letter-spacing:-.5pt!important;
 }
 
 .paragraph,
