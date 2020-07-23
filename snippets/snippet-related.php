@@ -1,5 +1,3 @@
-<?php example_cats_related_post() ?>
-
 <?php
 $category = get_the_category();
 $category_link = get_category_link( $category[0]->term_id );
