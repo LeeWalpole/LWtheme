@@ -23,7 +23,7 @@ if( $posts ): ?>
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max showcase">
 
-        <?php if ($showcase_heading) : ?>
+        
         <header class="showcase_header header bg-white colspan-12">
             <h2 class="headline">
                 <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
@@ -31,12 +31,10 @@ if( $posts ): ?>
                 </a>
             </h2>
         </header>
-        <?php endif; ?>
-
 
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
 
-        <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -116,7 +114,6 @@ $feature_youtube = get_field('feature_youtube');
 <?php endif; // have_posts ?>
 
 <?php wp_reset_postdata(); ?>
-
 
 <?php if ($layout == "showcase_all" || $layout == "showcase_limit")  { ?>
 <!-- Showcase ALL -->
