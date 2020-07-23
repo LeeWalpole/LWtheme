@@ -4,7 +4,7 @@ $category = get_the_category();
 $category_link = get_category_link( $category[0]->term_id );
 $showcase_heading = "MORE LIKE THIS";
 ?>
-
+<h1 class="colspan-12">Hell0000</h1>
 <?php 
 $posts = get_posts(array(
 'posts_per_page' => 1,
@@ -22,12 +22,13 @@ if( $posts ): ?>
             <h2 class="headline">
                 <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
                     <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
+                    <h1 class="colspan-12">Hello</h1>
                 </a>
             </h2>
         </header>
 
         <article class="teaser standard_teaser teaser_highlight colspan-7">
-
+        <h1 class="colspan-12">Hello2</h1>
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
