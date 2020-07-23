@@ -15,8 +15,8 @@ if( $related ) : ?>
 
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
-        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>">
-            <header class="showcase_header header colspan-12">
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
+            <header class="showcase_header header">
                 <i class="fas fa-arrow-circle-right color"></i>
                 <h2 class="headline">
                     <?php echo $showcase_heading; ?>

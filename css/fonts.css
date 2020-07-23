@@ -47,6 +47,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font1-bold);
+    letter-spacing:-.125;
 }
 
 .header {
@@ -69,7 +70,7 @@ h6 {
     line-height: var(--teaser-headline-line);
     margin-bottom: var(--padding-small);
     font-family: var(--font1-bold);
-    letter-spacing:-.05;
+    letter-spacing:-.125;
 }
 
 .paragraph,
