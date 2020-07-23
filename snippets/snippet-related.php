@@ -15,7 +15,8 @@ if( $related ) : ?>
 
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
-        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>"
+            class="colspan-12">
             <header class="showcase_header header">
                 <i class="fas fa-arrow-circle-right color"></i>
                 <h2 class="headline">
@@ -34,8 +35,8 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-            <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
-                value="Learn how to clean shave">
+            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
+                value="<?php echo esc_attr($headline); ?>">
                 <figure class="prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
                     data-ratio="3x2">
                     <picture>
