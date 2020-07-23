@@ -77,7 +77,7 @@ h6 {
 p {
     font-size: var(--p);
     line-height: var(--line-height);
-    font-weight: var(--regular);
+    font-family: var(--font1);
     font-style: normal;
 }
 
