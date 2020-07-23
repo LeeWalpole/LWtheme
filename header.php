@@ -32,7 +32,7 @@
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/min.css?ver=001" as="style"
     onload="this.rel='stylesheet'">
     */?>
-        <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/min.css?ver=002" as="style"
+        <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/min.css?ver=003" as="style"
     onload="this.rel='stylesheet'">
     
 </head>
