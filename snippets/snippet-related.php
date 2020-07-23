@@ -82,7 +82,6 @@ $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
-
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser">
                 <figure>
@@ -97,7 +96,7 @@ $feature_youtube = get_field('feature_youtube');
                     <h6 class="headline"><?php echo $headline; ?></h6>
                 </header>
             </a>
-            <?php endforeach; ?>
+            <?php endforeach; ?> 
             <!-- endwhile above -->
         </div><!-- puff_teasers -->
     </div>
