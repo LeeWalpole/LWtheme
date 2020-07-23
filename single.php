@@ -29,26 +29,6 @@
 <?php endif; ?>
 <?php endwhile; endif; ?>
 
-
-<?php
-$related = new WP_Query(
-    array(
-        'category__in'   => wp_get_post_categories( $post->ID ),
-        'posts_per_page' => 5,
-        'post__not_in'   => array( $post->ID )
-    )
-);
-
-if( $related->have_posts() ) { 
-    while( $related->have_posts() ) { 
-        $related->the_post(); 
- the_title();
-    }
-    wp_reset_postdata();
-}
-?>
-
-
 <?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
 <?php get_footer();  ?>

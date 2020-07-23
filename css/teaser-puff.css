@@ -89,7 +89,7 @@ padding:0;
 }
 
 .puff_teaser header .headline {
-    font-family: var(--font1);
+    font-family: var(--font1-bold);
     font-size: var(--p);
     line-height: 1.4;
     color: var(--color-black);

@@ -12,7 +12,7 @@
 .showcase_header {
     display: block;
     font-size: calc(var(--teaser-headline) * 1.5);
-    font-family: var(--font1-bold);
+    font-family: var(--font1-heavy);
     text-transform: uppercase;
     border-bottom: 1px solid var(--color-grey-half);
     margin: 0;
@@ -21,6 +21,7 @@
 
 .teaser_highlight .headline {
     font-size: calc(var(--teaser-headline) * 1.5);
+    font-family: var(--font1-heavy);
 
 }
 
