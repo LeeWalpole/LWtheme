@@ -1,3 +1,5 @@
+<?php example_cats_related_post() ?>
+
 <?php
 $category = get_the_category();
 $category_link = get_category_link( $category[0]->term_id );
@@ -23,7 +25,7 @@ if( $related ) : ?>
             </h2>
         </header>
         <article class="teaser standard_teaser teaser_highlight colspan-7">
-            <?php foreach( $related as $post ) :  setup_postdata($post); ?>
+            <?php foreach( $related as $post ) :  setup_postdata($post);  ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -55,7 +57,7 @@ $feature_youtube = get_field('feature_youtube');
             <?php endforeach; ?>
         </article>
         <?php wp_reset_postdata(); endif; ?>
-        
+
 <?php
 $related = get_posts( 
 array( 
