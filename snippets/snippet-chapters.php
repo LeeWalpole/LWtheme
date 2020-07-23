@@ -34,7 +34,7 @@ $chapter_tag = get_field('chapter_tag',$post_id); // for some reason this didn't
               chaptersBox.setAttribute("id", "chapters-box");
               // give the box a heading
               let chaptersHeading = document.createElement("h5");
-              chaptersHeading.textContent = "<?php echo esc_attr($chapter_prefix); ?>’s";
+              chaptersHeading.textContent = "<?php echo esc_attr($chapter_prefix); ?>s";
               chaptersHeading.className = "accordion";
               chaptersBox.appendChild(chaptersHeading);
 

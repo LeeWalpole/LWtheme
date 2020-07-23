@@ -43,8 +43,8 @@ margin-bottom:0;
     content: attr(data-prefix) " #"attr(data-prefix-count);
     display: block;
     text-transform: uppercase;
-    font-weight: var(--bold);
-    font-size: var(--kicker);
+    font-family: var(--font1-bold);
+    font-size: var(--small);
     color: var(--color);
     margin-bottom: 0;
 }
