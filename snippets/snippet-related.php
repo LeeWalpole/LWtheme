@@ -3,15 +3,15 @@ $category = get_the_category();
 $category_link = get_category_link( $category[0]->term_id );
 $showcase_heading = "MORE LIKE THIS";
 ?>
-<?php 
-$posts = get_posts(array(
-'post_type'			=> 'post',
-'posts_per_page' => 1,
-'offset' => 0,
+<?php
+$posts = get_posts( 
+array( 
 'category__in' => wp_get_post_categories( $post->ID ), 
-'post__not_in' => array( $post->ID ) ,
-) ); 
-if( $posts ): ?>
+'numberposts'  => 1, 
+'post__not_in' => array( $post->ID ) 
+) 
+);
+if( $posts ) : ?>
 
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
@@ -23,7 +23,6 @@ if( $posts ): ?>
             </h2>
         </header>
         <article class="teaser standard_teaser teaser_highlight colspan-7">
-        <h1 class="colspan-12">Hello2</h1>
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
@@ -59,14 +58,16 @@ $feature_youtube = get_field('feature_youtube');
 
         <?php wp_reset_postdata(); ?>
 
-        <?php 
-$posts = get_posts(array(
-'post_type'			=> 'post',
-'posts_per_page' => 4,
+<?php
+$posts = get_posts( 
+array( 
+'category__in' => wp_get_post_categories( $post->ID ), 
+'numberposts'  => 4, 
 'offset' => 1,
-'tag_id' => $teaser_tag, 
-'category' => $teaser_category ) ); 
-if( $posts ): ?>
+'post__not_in' => array( $post->ID ) 
+) 
+);
+if( $posts ) : ?>
 
         <div class="puff_teasers colspan-5 bg-offwhite">
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>

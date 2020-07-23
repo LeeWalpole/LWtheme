@@ -13,7 +13,7 @@
 }
 
 .standard_teaser .headline {
-    font-weight:var(--bold);
+    font-family: var(--font1-bold);
 }
 
 
