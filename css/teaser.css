@@ -11,28 +11,20 @@
 
 .showcase_header {
     display: block;
-    font-size: calc(var(--teaser-headline) * 1.5);
-    font-family: var(--font1-heavy);
     text-transform: uppercase;
     border-bottom: 1px solid var(--color-grey-half);
     margin: 0;
     padding: 0;
 }
 
-.teaser_highlight .headline {
+.showcase_header * {
     font-size: calc(var(--teaser-headline) * 1.5);
-    font-family: var(--font1-heavy);
-}
+ }
 
-.teaser_highlight .headline a {
-    font-family: var(--font1-heavy);
-}
-
-
-
-.showcase_header h2 a {
+ .showcase_header .headline {
+    font-family: var(--font1-heavy)!important;
     color: var(--color-black);
-}
+ }
 
 .showcase_header * {
     margin-right: var(--padding-small);

@@ -22,13 +22,14 @@ if( $posts ): ?>
     <div class="grid grid-gap w-max showcase">
 
         <?php if ($showcase_heading) : ?>
-        <header class="showcase_header header bg-white colspan-12">
-            <h2 class="headline">
-                <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
-                    <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
-                </a>
-            </h2>
-        </header>
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>">
+            <header class="showcase_header header colspan-12">
+                <i class="fas fa-arrow-circle-right color"></i>
+                <h2 class="headline">
+                    <?php echo $showcase_heading; ?>
+                </h2>
+            </header>
+        </a>
         <?php endif; ?>
 
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">

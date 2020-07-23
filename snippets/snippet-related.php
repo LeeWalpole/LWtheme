@@ -15,14 +15,14 @@ if( $related ) : ?>
 
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
-        <header class="showcase_header header colspan-12">
-            <h2 class="headline">
-                <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>">
-                    <i class="fas fa-arrow-circle-right color"></i>
-                    <b><?php echo $showcase_heading; ?></b>
-                </a>
-            </h2>
-        </header>
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>">
+            <header class="showcase_header header colspan-12">
+                <i class="fas fa-arrow-circle-right color"></i>
+                <h2 class="headline">
+                    <?php echo $showcase_heading; ?>
+                </h2>
+            </header>
+        </a>
         <article class="teaser standard_teaser teaser_highlight colspan-7">
             <?php foreach( $related as $post ) :  setup_postdata($post);  ?>
             <?php
@@ -57,7 +57,7 @@ $feature_youtube = get_field('feature_youtube');
         </article>
         <?php wp_reset_postdata(); endif; ?>
 
-<?php
+        <?php
 $related = get_posts( 
 array( 
     'category__in' => wp_get_post_categories( $post->ID ), 
@@ -91,7 +91,7 @@ $feature_youtube = get_field('feature_youtube');
                     <h6 class="headline"><?php echo $headline; ?></h6>
                 </header>
             </a>
-            <?php endforeach; ?> 
+            <?php endforeach; ?>
             <!-- endwhile above -->
         </div><!-- puff_teasers -->
     </div>
