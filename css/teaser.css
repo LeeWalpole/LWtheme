@@ -22,8 +22,13 @@
 .teaser_highlight .headline {
     font-size: calc(var(--teaser-headline) * 1.5);
     font-family: var(--font1-heavy);
-
 }
+
+.teaser_highlight .headline b {
+    font-family: var(--font1-heavy);
+}
+
+
 
 .showcase_header h2 a {
     color: var(--color-black);
@@ -68,6 +73,7 @@
 .teaser:hover .headline {
     color: var(--color);
     text-decoration: underline;
+    font-family: var(--font1-bold);
 }
 
 .teaser:hover img {
