@@ -4,14 +4,14 @@ $category_link = get_category_link( $category[0]->term_id );
 $showcase_heading = "MORE LIKE THIS";
 ?>
 <?php
-$posts = get_posts( 
+$related = get_posts( 
 array( 
-'category__in' => wp_get_post_categories( $post->ID ), 
-'numberposts'  => 1, 
-'post__not_in' => array( $post->ID ) 
+    'category__in' => wp_get_post_categories( $post->ID ), 
+    'numberposts'  => 1, 
+    'post__not_in' => array( $post->ID ) 
 ) 
 );
-if( $posts ) : ?>
+if( $related ) : ?>
 
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
@@ -23,7 +23,7 @@ if( $posts ) : ?>
             </h2>
         </header>
         <article class="teaser standard_teaser teaser_highlight colspan-7">
-            <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+            <?php foreach( $related as $post ) :  setup_postdata($post); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -54,23 +54,20 @@ $feature_youtube = get_field('feature_youtube');
             </a>
             <?php endforeach; ?>
         </article>
-        <?php endif; // have_posts ?>
-
-        <?php wp_reset_postdata(); ?>
-
+        <?php wp_reset_postdata(); endif; ?>
+        
 <?php
-$posts = get_posts( 
+$related = get_posts( 
 array( 
-'category__in' => wp_get_post_categories( $post->ID ), 
-'numberposts'  => 4, 
-'offset' => 1,
-'post__not_in' => array( $post->ID ) 
+    'category__in' => wp_get_post_categories( $post->ID ), 
+    'numberposts'  => 4, 
+    'post__not_in' => array( $post->ID ) 
 ) 
 );
-if( $posts ) : ?>
+if( $related ) : ?>
 
         <div class="puff_teasers colspan-5 bg-offwhite">
-            <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+            <?php foreach( $related as $post ) :  setup_postdata($post); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -99,6 +96,4 @@ $feature_youtube = get_field('feature_youtube');
     </div>
 </div>
 <!-- end have posts below -->
-<?php endif; // posts querie ?>
-
-<?php wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); endif; ?>
