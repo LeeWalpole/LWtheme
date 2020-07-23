@@ -35,23 +35,18 @@
     <aside class="shares w-safe">
         <p>Email sign-up</p>
 
-        <style>
-p.font { font-family:var(--font)!important; }
-p.font-bold { font-family:var(--font-bold)!important; }
-p.font-heavy { font-family:var(--font-heavy)!important; }
-</style>
-
-<p class="font">
+        <hr>
+<div class="font">
     Class Font
-</p>
-
-<p class="font-bold">
+</div>
+<hr>
+<div class="font-bold">
     Class Font Bold
-</p>
-
-<p class="font-heavy">
+</div>
+<hr>
+<div class="font-heavy">
     Class Font heavy
-</p>
+</div>
 
     </aside>
 </div>
