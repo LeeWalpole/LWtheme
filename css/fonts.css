@@ -32,6 +32,8 @@
     line-height: var(--line-height);
 }
 
+a {color:inherit;}
+
 body, html { 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -44,8 +46,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-1);
-    font-weight: var(--heavy);
+    font-family: var(--font1-bold);
+
 }
 
 .header {
@@ -67,6 +69,7 @@ h6 {
     font-size: var(--teaser-headline);
     line-height: var(--teaser-headline-line);
     margin-bottom: var(--padding-small);
+    font-family: var(--font1-heavy);
 }
 
 .paragraph,

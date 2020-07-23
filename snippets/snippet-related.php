@@ -1,32 +1,27 @@
-<?php     
-$teaser_category = "More like this";
+<?php
 $category = get_the_category();
 $category_link = get_category_link( $category[0]->term_id );
 $showcase_heading = "MORE LIKE THIS";
 ?>
-<h1 class="colspan-12">Hell0000</h1>
 <?php 
 $posts = get_posts(array(
+'post_type'			=> 'post',
 'posts_per_page' => 1,
 'offset' => 0,
 'category__in' => wp_get_post_categories( $post->ID ), 
 'post__not_in' => array( $post->ID ) ,
-// 'post_type'			=> 'post',
 ) ); 
 if( $posts ): ?>
 
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
-
         <header class="showcase_header header colspan-12">
             <h2 class="headline">
-                <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
+                <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>">
                     <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
-                    <h1 class="colspan-12">Hello</h1>
                 </a>
             </h2>
         </header>
-
         <article class="teaser standard_teaser teaser_highlight colspan-7">
         <h1 class="colspan-12">Hello2</h1>
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>

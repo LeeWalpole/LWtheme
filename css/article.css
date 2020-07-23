@@ -14,14 +14,14 @@
 {
     font-size:var(--article-headline);
     line-height:var(--article-headline-line);
-    font-weight:var(--heavy);
+    font-family: var(--font1-bold);
     margin-bottom:var(--padding-small);
     color:var(--color-black);
  }
 
  .article-body > strong { 
     font-size:var(--p);
-    font-weight:var(--bold);
+    font-family: var(--font1-bold);
     margin-bottom:var(--padding);
     color:var(--color-offblack);
 }
@@ -34,14 +34,13 @@
 
 .article-body > p { 
     font-size:var(--p);
-    font-weight:var(--regular);
+    font-family: var(--font1);
     margin-bottom:var(--padding);
     color:var(--color-offblack);
 }
 
 .article-body p:first-of-type { 
     font-size:var(--p);
-    font-weight:var(--bold);
 }
 
 .article-body figure { 
@@ -56,7 +55,7 @@ color:var(--color-offblack);
 font-size:var(--xsmall);
 text-align: center;
 padding:var(--padding-small);
-font-weight:var(--bold);
+font-family: var(--font1-bold);
 }
 
 .article-body figcaption a, blockquote a { 
@@ -82,7 +81,7 @@ color:var(--color);
     margin-bottom:var(--padding-big);
     margin-left:var(--padding);
     font-size:var(--p);
-    font-weight:var(--regular);
+    font-family: var(--font1);
     color:var(--color-offblack);
     }
     
@@ -103,12 +102,12 @@ color:var(--color);
     .article-body dl { 
     margin-bottom:var(--padding-big);
     margin-left:var(--padding);
-    font-weight:var(--regular);
+    font-family: var(--font1);
     color:var(--color-offblack);
     }
     .article-body dt { 
     font-size:var(--p);
-    font-weight:var(--bold);
+    font-family: var(--font1-bold);
     }
     .article-body dd { 
     font-size:var(--small);
@@ -133,7 +132,7 @@ color:var(--color);
         .article-body > aside h5 { 
         font-size: var(--article-headline);
         line-height: var(--article-headline-line);
-        font-weight:900!important;
+        font-family: var(--font1-heavy);
         color:var(--color-white);
         margin-bottom:var(--padding-small);
         padding-bottom:var(--padding-small);
@@ -144,7 +143,7 @@ color:var(--color);
         
         .article-body > aside p { 
         font-size:var(--small)!important;
-        font-weight:300!important;
+        font-family: var(--font1);
         color:var(--color-light);
         }
 
@@ -158,7 +157,7 @@ color:var(--color);
             font-size:var(--xsmall);
             color:var(--color-offblack);
             line-height:1;
-            font-weight:var(--regular);
+            font-family: var(--font1);
         }
 
         .article-footer ul.sharers-horizontal {

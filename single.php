@@ -31,25 +31,4 @@
 
 <?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
-<div class="row-block bg-color">
-    <aside class="shares w-safe">
-        <p>Email sign-up</p>
-
-        <hr>
-<div class="font">
-    Class Font
-</div>
-<hr>
-<div class="font-bold">
-    Class Font Bold
-</div>
-<hr>
-<div class="font-heavy">
-    Class Font heavy
-</div>
-
-    </aside>
-</div>
-
-
 <?php get_footer();  ?>

@@ -59,16 +59,13 @@
 :root {    
 --font-1: 'Geomanist', Helvetica, Arial, sans-serif;    
 --font-2: 'Geomanist', Helvetica, Arial, sans-serif;    
---font-normal: 'Geomanist', Helvetica, Arial, sans-serif;    
---font-bold: 'GeomanistBold', Helvetica, Arial, sans-serif;    
---font-heavy: 'GeomanistHeavy', Helvetica, Arial, sans-serif;    
+--font1: 'Geomanist', Helvetica, Arial, sans-serif;    
+--font1-bold: 'GeomanistBold', Helvetica, Arial, sans-serif;    
+--font1-heavy: 'GeomanistHeavy', Helvetica, Arial, sans-serif;    
 --regular: 400;    
 --bold: bold;    
 --heavy: 900;
 }
-.font { font-family:var(--font)!important; }
-.font-bold { font-family:var(--font-bold)!important; }
-.font-heavy { font-family:var(--font-heavy)!important; color:red; }
 </style>
 <!-- new font tweaks??? -->
 <!-- new font tweaks??? -->
