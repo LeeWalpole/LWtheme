@@ -20,11 +20,11 @@ $posts = get_posts(array(
 ) ); 
 if( $posts ): ?>
 
-<div class="bg-white row-block">
+<div class="bg-white row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
 
         
-        <header class="showcase_header header bg-white colspan-12">
+        <header class="showcase_header header colspan-12">
             <h2 class="headline">
                 <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
                     <i class="fas fa-arrow-circle-right color"></i><?php echo $showcase_heading; ?>
@@ -32,7 +32,7 @@ if( $posts ): ?>
             </h2>
         </header>
 
-        <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
+        <article class="teaser standard_teaser teaser_highlight colspan-7">
 
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
