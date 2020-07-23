@@ -20,7 +20,7 @@ $posts = get_posts(array(
 ) ); 
 if( $posts ): ?>
 
-<div class="bg-white row-block bg-offwhite">
+<div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
 
         
@@ -47,7 +47,7 @@ $feature_youtube = get_field('feature_youtube');
             <?php $i++; if($i <= 1 ) : ?>
             <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
                 value="Learn how to clean shave">
-                <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
+                <figure class="prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
                     data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
@@ -58,7 +58,7 @@ $feature_youtube = get_field('feature_youtube');
                             alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
                 </figure>
-                <header class="header bg-white postfade">
+                <header class="header postfade">
                     <strong class="kicker"><?php echo $kicker; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
@@ -80,7 +80,7 @@ $posts = get_posts(array(
 'category' => $teaser_category ) ); 
 if( $posts ): ?>
 
-        <div class="puff_teasers colspan-5 bg-white">
+        <div class="puff_teasers colspan-5 bg-offwhite">
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
@@ -92,7 +92,7 @@ $feature_youtube = get_field('feature_youtube');
 ?>
 
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
-                class="puff_teaser teaser bg-white">
+                class="puff_teaser teaser">
                 <figure>
                     <picture>
                         <source type="image/jpg" srcset="<?php echo esc_attr($teaser_image_url); ?>">
@@ -142,10 +142,10 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-        <article class="teaser standard_teaser bg-white">
+        <article class="teaser standard_teaser">
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 value="<?php echo esc_attr($headline); ?>">
-                <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
+                <figure class="prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
                     data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
@@ -156,7 +156,7 @@ $feature_youtube = get_field('feature_youtube');
                             alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
                 </figure>
-                <header class="header bg-white prefade">
+                <header class="header prefade">
                     <strong class="kicker"><?php echo $kicker; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if ($subdeck) : ?><p><?php echo $subdeck; ?></p><?php endif; ?>

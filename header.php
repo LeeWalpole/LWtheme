@@ -27,9 +27,31 @@
     <?php // get_template_part( 'snippets/snippet', 'fonts' ); // col-1 ?>
     <!-- Load Fonts below -->
     <?php include_once( 'fonts/font.php' ); /*  include_once( 'fonts.php' ); */ ?>
-    <?php echo "<style>"; include_once( 'dist/min.css' ); echo "</style>"; ?>
+    <?php // echo "<style>"; include_once( 'dist/min.css' ); echo "</style>"; ?>
+
+    <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/min.css?ver=001" as="style"
+    onload="this.rel='stylesheet'">
 </head>
 
 <body id="body" class="body prescroll">
     <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
+
+
+<style>
+.font { font-family:var(--font)!important; }
+.font-bold { font-family:var(--font-bold)!important; }
+.font-heavy { font-family:var(--font-heavy)!important; }
+</style>
+
+<p class="font">
+    Class Font
+</p>
+
+<p class="font-bold">
+    Class Font Bold
+</p>
+
+<p class="font-heavy">
+    Class Font heavy
+</p>
