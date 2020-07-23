@@ -43,7 +43,7 @@
     line-height: var(--hero-headline-line);
     margin-bottom:var(--padding-small);
     color:var(--color-white);
-    font-family: var(--font1-heavy);
+    font-family: var(--font1-bold);
 }
 
 

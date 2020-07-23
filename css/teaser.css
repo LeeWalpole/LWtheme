@@ -24,7 +24,7 @@
     font-family: var(--font1-heavy);
 }
 
-.teaser_highlight .headline b {
+.teaser_highlight .headline a {
     font-family: var(--font1-heavy);
 }
 

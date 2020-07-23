@@ -18,7 +18,8 @@ if( $related ) : ?>
         <header class="showcase_header header colspan-12">
             <h2 class="headline">
                 <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>">
-                    <i class="fas fa-arrow-circle-right color"></i><b><?php echo $showcase_heading; ?></b>
+                    <i class="fas fa-arrow-circle-right color"></i>
+                    <b><?php echo $showcase_heading; ?></b>
                 </a>
             </h2>
         </header>
