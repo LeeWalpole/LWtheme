@@ -54,7 +54,6 @@
 	font-style: normal;
 	font-display:swap;
 }
-
 </style>"; ?>
 <style>
 :root {    
@@ -67,10 +66,7 @@
 --bold: bold;    
 --heavy: 900;
 }
-
 .font { font-family:var(--font)!important; }
 .font-bold { font-family:var(--font-bold)!important; }
 .font-heavy { font-family:var(--font-heavy)!important; color:red; }
-
 </style>
-<!-- 	font-display: swap; -->

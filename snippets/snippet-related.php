@@ -23,7 +23,6 @@ if( $posts ): ?>
 <div class="bg-offwhite row-block bg-offwhite">
     <div class="grid grid-gap w-max showcase">
 
-        
         <header class="showcase_header header colspan-12">
             <h2 class="headline">
                 <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($teaser_category); ?>">
