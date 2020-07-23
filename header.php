@@ -38,20 +38,3 @@
     <main>
 
 
-<style>
-.font { font-family:var(--font)!important; }
-.font-bold { font-family:var(--font-bold)!important; }
-.font-heavy { font-family:var(--font-heavy)!important; }
-</style>
-
-<p class="font">
-    Class Font
-</p>
-
-<p class="font-bold">
-    Class Font Bold
-</p>
-
-<p class="font-heavy">
-    Class Font heavy
-</p>
