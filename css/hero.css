@@ -33,7 +33,7 @@
 
 .hero .header .kicker {
     font-size: var(--hero-kicker);
-    font-weight:900;
+    font-family: var(--font1-bold);
     line-height: var(--hero-headline-line);
     margin-bottom:var(--padding-small);
 }
@@ -43,13 +43,15 @@
     line-height: var(--hero-headline-line);
     margin-bottom:var(--padding-small);
     color:var(--color-white);
-    text-transform: uppercase;
+    font-family: var(--font1-heavy);
 }
 
-.category .hero .header h1 {
-    font-size: calc(var(--hero-headline) * 1.4);
-    color:var(--color-white);
-    font-weight:900;
+
+.hero .header h1.headline {
+    font-size: calc(var(--hero-headline) * 2);
+    line-height: var(--hero-headline-line);
+    margin-bottom:var(--padding-small);
+    color:var(--color-white); 
 }
 
 .hero .header .subdeck {
@@ -60,7 +62,6 @@
     font-style:normal;
     display:block;
 }
-
 
 .feature {
     width: 100%;
