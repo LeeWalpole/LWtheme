@@ -42,7 +42,6 @@ $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
-
             <?php $i++; if($i <= 1 ) : ?>
             <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
                 value="Learn how to clean shave">
