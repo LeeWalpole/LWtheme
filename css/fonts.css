@@ -47,7 +47,6 @@ h4,
 h5,
 h6 {
     font-family: var(--font1-bold);
-
 }
 
 .header {
@@ -56,12 +55,12 @@ h6 {
 
 .kicker {
     color: var(--color);
-    font-weight: var(--bold);
     font-size: var(--kicker);
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: var(--padding-xsmall);
     display: block;
+    font-family: var(--font1-heavy);
 }
 
 .headline {
@@ -69,7 +68,8 @@ h6 {
     font-size: var(--teaser-headline);
     line-height: var(--teaser-headline-line);
     margin-bottom: var(--padding-small);
-    font-family: var(--font1-heavy);
+    font-family: var(--font1-bold);
+    letter-spacing:-.05;
 }
 
 .paragraph,
