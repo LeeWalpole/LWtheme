@@ -6,7 +6,7 @@
 
 <?php get_template_part( 'snippets/newsletter' ); ?>
 
-<?php $my_query = new WP_Query('category_name=featured&posts_per_page=5');
+<?php $my_query = new WP_Query('posts_per_page=5');
   while ($my_query->have_posts()) : $my_query->the_post();
  
   $do_not_duplicate = $post->ID; //This is the magic line
