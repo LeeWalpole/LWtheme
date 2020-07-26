@@ -15,6 +15,8 @@ $posts = get_posts(array(
 'posts_per_page' => 1,
 'offset' => 0,
 'tag_id' => $teaser_tag, 
+'post__not_in' => array($splashID),
+'exclude' => array($splashID),
 'category' => $teaser_category ) ); 
 if( $posts ): ?>
 
@@ -75,8 +77,6 @@ $posts = get_posts(array(
 'post_type'			=> 'post',
 'posts_per_page' => 4,
 'offset' => 1,
-'post__not_in' => array($splashID),
-'exclude' => array($splashID),
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
 if( $posts ): ?>
