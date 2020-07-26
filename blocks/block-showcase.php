@@ -75,6 +75,7 @@ $posts = get_posts(array(
 'post_type'			=> 'post',
 'posts_per_page' => 4,
 'offset' => 1,
+'post__not_in' => array($splashID),
 'exclude' => array($splashID),
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
