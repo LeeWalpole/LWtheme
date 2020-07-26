@@ -9,6 +9,15 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
+<?php $my_query = new WP_Query('category_name=featured&posts_per_page=1');
+  while ($my_query->have_posts()) : $my_query->the_post();
+ 
+  $do_not_duplicate = $post->ID; //This is the magic line
+ 
+?>
+  <p> <?php the_title(); ?></p>
+<?php endwhile; ?>
+
 <?php 
 $posts = get_posts(array(
 'post_type'			=> 'post',
@@ -33,7 +42,9 @@ if( $posts ): ?>
         <?php endif; ?>
 
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
-            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post );
+             if( $post->ID == $do_not_duplicate ) continue; 
+            ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
