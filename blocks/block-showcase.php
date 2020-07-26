@@ -15,7 +15,6 @@ $posts = get_posts(array(
 'posts_per_page' => 1,
 'offset' => 0,
 'tag_id' => $teaser_tag, 
-'post__not_in' => $splash_id,
 'category' => $teaser_category ) ); 
 if( $posts ): ?>
 
@@ -23,8 +22,7 @@ if( $posts ): ?>
     <div class="grid grid-gap w-max showcase">
 
         <?php if ($showcase_heading) : ?>
-        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>"
-            class="colspan-12">
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
             <header class="showcase_header header">
                 <i class="fas fa-arrow-circle-right color"></i>
                 <h2 class="headline">
@@ -35,8 +33,7 @@ if( $posts ): ?>
         <?php endif; ?>
 
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
-            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post );
-            ?>
+            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
 $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
@@ -44,7 +41,6 @@ $headline = get_field('hero_headline') ?: get_the_title();
 $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
-$splash_id = $post->ID;
 ?>
             <?php $i++; if($i <= 1 ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
@@ -61,7 +57,7 @@ $splash_id = $post->ID;
                     </picture>
                 </figure>
                 <header class="header bg-white postfade">
-                    <strong class="kicker"><?php echo $kicker; echo $splash_id; ?></strong>
+                    <strong class="kicker"><?php echo $kicker; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
                 </header>
@@ -75,9 +71,8 @@ $splash_id = $post->ID;
 
         <?php 
 $posts = get_posts(array(
-'post_type' => 'post',
+'post_type'			=> 'post',
 'posts_per_page' => 4,
-'post__not_in' => $splash_id,
 'offset' => 1,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
@@ -128,7 +123,6 @@ $feature_youtube = get_field('feature_youtube');
 $posts = get_posts(array(
 'post_type'			=> 'post',
 'posts_per_page' => $showcase_limit,
-'post__not_in' => $splash_id,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
 if( $posts ): ?>
