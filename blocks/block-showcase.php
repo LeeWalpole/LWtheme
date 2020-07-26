@@ -9,6 +9,8 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
+
+
 <?php 
 $posts = get_posts(array(
 'post_type'			=> 'post',
@@ -44,8 +46,13 @@ $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
 $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
+
+<?php if($i <= 1 and $showcase_heading == "Latest" ) : ?>
+<?php $splashID = $post->ID; ?>
+<?php endif; ?>
+
             <?php $i++; if($i <= 1 ) : ?>
-            <?php $splashID = $post->ID; ?>
+     
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 value="<?php echo esc_attr($headline); ?>">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
