@@ -62,6 +62,7 @@ $posts = get_posts(array(
 'post_type' => 'post',
 'posts_per_page' => 4,
 'post__not_in' => $splash_id,
+'exclude' => $splash_id,
 'offset' => 1,
 )); 
 if( $posts ): ?>
