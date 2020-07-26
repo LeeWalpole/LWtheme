@@ -59,7 +59,7 @@ $feature_youtube = get_field('feature_youtube');
                     </picture>
                 </figure>
                 <header class="header bg-white postfade">
-                    <strong class="kicker"><?php echo $kicker; ?></strong>
+                    <strong class="kicker"><?php echo $kicker; echo $do_not_duplicate; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
                 </header>
