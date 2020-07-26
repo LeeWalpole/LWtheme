@@ -43,6 +43,7 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
             <?php $i++; if($i <= 1 ) : ?>
+            <?php $splashID = $post->ID; ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 value="<?php echo esc_attr($headline); ?>">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
@@ -57,7 +58,7 @@ $feature_youtube = get_field('feature_youtube');
                     </picture>
                 </figure>
                 <header class="header bg-white postfade">
-                    <strong class="kicker"><?php echo $kicker; ?></strong>
+                    <strong class="kicker"><?php echo $kicker; echo $splashID; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
                 </header>
@@ -74,6 +75,7 @@ $posts = get_posts(array(
 'post_type'			=> 'post',
 'posts_per_page' => 4,
 'offset' => 1,
+'exclude' => $splashID,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
 if( $posts ): ?>
