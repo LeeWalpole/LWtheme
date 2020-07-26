@@ -9,29 +9,12 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
-
-<?php // grab latest splash ID so it's not repeated later on... 
-    if($showcase_heading == "Latest" ) { ?>
-<?php $posts = get_posts(array( 
-    'post_type' => 'post',
-    'posts_per_page' => 1,
-    )); 
-    if( $posts ): ?>
-<?php foreach ( $posts as $post ) : setup_postdata( $post );  ?>
-<?php $splashID = $post->ID; ?>
-<?php endforeach;  ?>
-<?php endif; wp_reset_postdata(); // $posts   ?>
-
-<?php } else { // assuming you don't call the block latest  ?>
-
 <?php 
     $posts = get_posts(array(
     'post_type'			=> 'post',
     'posts_per_page' => 1,
     'offset' => 0,
     'tag_id' => $teaser_tag, 
-    'post__not_in' => array($splashID),
-    'exclude' => array($splashID),
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
 
@@ -191,5 +174,3 @@ $showcase_heading = get_sub_field('showcase_heading');
 <?php } // $showcase == "showcase_all" || "showcase_limit")  ?>
 
 <?php wp_reset_postdata(); ?>
-
-<?php } // latest  ?>
