@@ -10,6 +10,19 @@ $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
 
+<?php // grab latest splash ID so it's not repeated later on... 
+    if($showcase_heading == "Latest" ) : ?>
+    <?php $posts = get_posts(array( 
+    'post_type' => 'post',
+    'posts_per_page' => 1,
+    )); 
+    if( $posts ): ?>
+    <?php foreach ( $posts as $post ) : setup_postdata( $post );  ?>
+        <?php $splashID = $post->ID; ?>
+    <?php endforeach;  ?>
+    <?php endif; wp_reset_postdata(); // $posts   ?>
+<?php endif; // latest ?>
+
 
 <?php 
 $posts = get_posts(array(
@@ -26,7 +39,8 @@ if( $posts ): ?>
     <div class="grid grid-gap w-max showcase">
 
         <?php if ($showcase_heading) : ?>
-        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>"
+            class="colspan-12">
             <header class="showcase_header header">
                 <i class="fas fa-arrow-circle-right color"></i>
                 <h2 class="headline">
@@ -47,12 +61,8 @@ $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
-<?php if($i <= 1 and $showcase_heading == "Latest" ) : ?>
-<?php $splashID = $post->ID; ?>
-<?php endif; ?>
-
             <?php $i++; if($i <= 1 ) : ?>
-     
+
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 value="<?php echo esc_attr($headline); ?>">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
