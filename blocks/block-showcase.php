@@ -11,29 +11,29 @@ $showcase_heading = get_sub_field('showcase_heading');
 
 
 <?php // grab latest splash ID so it's not repeated later on... 
-    if($showcase_heading == "Latest" ) : ?>
-    <?php $posts = get_posts(array( 
+    if($showcase_heading == "Latest" ) { ?>
+<?php $posts = get_posts(array( 
     'post_type' => 'post',
     'posts_per_page' => 1,
     )); 
     if( $posts ): ?>
-    <?php foreach ( $posts as $post ) : setup_postdata( $post );  ?>
-        <?php $splashID = $post->ID; ?>
-    <?php endforeach;  ?>
-    <?php endif; wp_reset_postdata(); // $posts   ?>
-<?php endif; // latest ?>
+<?php foreach ( $posts as $post ) : setup_postdata( $post );  ?>
+<?php $splashID = $post->ID; ?>
+<?php endforeach;  ?>
+<?php endif; wp_reset_postdata(); // $posts   ?>
 
+<?php } else { // assuming you don't call the block latest  ?>
 
 <?php 
-$posts = get_posts(array(
-'post_type'			=> 'post',
-'posts_per_page' => 1,
-'offset' => 0,
-'tag_id' => $teaser_tag, 
-'post__not_in' => array($splashID),
-'exclude' => array($splashID),
-'category' => $teaser_category ) ); 
-if( $posts ): ?>
+    $posts = get_posts(array(
+    'post_type'			=> 'post',
+    'posts_per_page' => 1,
+    'offset' => 0,
+    'tag_id' => $teaser_tag, 
+    'post__not_in' => array($splashID),
+    'exclude' => array($splashID),
+    'category' => $teaser_category ) ); 
+    if( $posts ): ?>
 
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max showcase">
@@ -53,13 +53,13 @@ if( $posts ): ?>
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
-$category = get_the_category();
-$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
-$headline = get_field('hero_headline') ?: get_the_title(); 
-$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
-$feature_youtube = get_field('feature_youtube'); 
-?>
+    $category = get_the_category();
+    $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+    $headline = get_field('hero_headline') ?: get_the_title(); 
+    $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+    $feature_youtube = get_field('feature_youtube'); 
+    ?>
 
             <?php $i++; if($i <= 1 ) : ?>
 
@@ -77,7 +77,7 @@ $feature_youtube = get_field('feature_youtube');
                     </picture>
                 </figure>
                 <header class="header bg-white postfade">
-                    <strong class="kicker"><?php echo $kicker; echo $splashID; ?></strong>
+                    <strong class="kicker"><?php echo $kicker; ?></strong>
                     <h6 class="headline"><?php echo $headline; ?></h6>
                     <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
                 </header>
@@ -90,24 +90,24 @@ $feature_youtube = get_field('feature_youtube');
         <?php wp_reset_postdata(); ?>
 
         <?php 
-$posts = get_posts(array(
-'post_type'			=> 'post',
-'posts_per_page' => 4,
-'offset' => 1,
-'tag_id' => $teaser_tag, 
-'category' => $teaser_category ) ); 
-if( $posts ): ?>
+    $posts = get_posts(array(
+    'post_type'			=> 'post',
+    'posts_per_page' => 4,
+    'offset' => 1,
+    'tag_id' => $teaser_tag, 
+    'category' => $teaser_category ) ); 
+    if( $posts ): ?>
 
         <div class="puff_teasers colspan-5 bg-white">
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
-$category = get_the_category();
-$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
-$headline = get_field('hero_headline') ?: get_the_title(); 
-$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
-$feature_youtube = get_field('feature_youtube'); 
-?>
+    $category = get_the_category();
+    $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+    $headline = get_field('hero_headline') ?: get_the_title(); 
+    $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+    $feature_youtube = get_field('feature_youtube'); 
+    ?>
 
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
@@ -140,12 +140,12 @@ $feature_youtube = get_field('feature_youtube');
 <?php get_template_part( 'snippets/snippet-search' ); ?>
 
 <?php 
-$posts = get_posts(array(
-'post_type'			=> 'post',
-'posts_per_page' => $showcase_limit,
-'tag_id' => $teaser_tag, 
-'category' => $teaser_category ) ); 
-if( $posts ): ?>
+    $posts = get_posts(array(
+    'post_type'			=> 'post',
+    'posts_per_page' => $showcase_limit,
+    'tag_id' => $teaser_tag, 
+    'category' => $teaser_category ) ); 
+    if( $posts ): ?>
 
 <div class="bg-offwhite row-block">
     <div class="w-max grid grid-gap padding-x teasers standard_teasers">
@@ -153,13 +153,13 @@ if( $posts ): ?>
         <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
 
         <?php
-$category = get_the_category();
-$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
-$headline = get_field('hero_headline') ?: get_the_title(); 
-$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
-$feature_youtube = get_field('feature_youtube'); 
-?>
+    $category = get_the_category();
+    $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+    $headline = get_field('hero_headline') ?: get_the_title(); 
+    $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+    $feature_youtube = get_field('feature_youtube'); 
+    ?>
 
         <article class="teaser standard_teaser bg-white">
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
@@ -191,3 +191,5 @@ $feature_youtube = get_field('feature_youtube');
 <?php } // $showcase == "showcase_all" || "showcase_limit")  ?>
 
 <?php wp_reset_postdata(); ?>
+
+<?php } // latest  ?>
