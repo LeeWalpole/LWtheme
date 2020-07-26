@@ -13,6 +13,7 @@ $showcase_heading = get_sub_field('showcase_heading');
 $posts = get_posts(array(
 'post_type'			=> 'post',
 'posts_per_page' => 1,
+'post__not_in' => $do_not_duplicate,
 'offset' => 0,
 'tag_id' => $teaser_tag, 
 'category' => $teaser_category ) ); 
@@ -73,7 +74,7 @@ $feature_youtube = get_field('feature_youtube');
 
         <?php 
 $posts = get_posts(array(
-'post_type' => 'post',
+'post_type'			=> 'post',
 'posts_per_page' => 4,
 'offset' => 1,
 'tag_id' => $teaser_tag, 
