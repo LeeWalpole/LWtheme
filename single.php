@@ -18,8 +18,6 @@
             <?php } ?>
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
-
-
         
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
