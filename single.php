@@ -18,8 +18,14 @@
             <?php } ?>
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
-        
-        <?php include_once( 'snippets/snippet-chapters.php' ); /*  include_once( 'fonts.php' ); */ ?>
+
+
+        <?php $chapter_status = get_field('chapter_status',$post_id); 
+        if ($chapter_status == "on") : ?>
+        <aside id="chapters" class="bg-black chapters">
+            <!-- Chapters appear Below -->
+        </aside>
+        <?php endif; ?>
 
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
