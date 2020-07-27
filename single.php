@@ -18,7 +18,8 @@
             <?php } ?>
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
-        <?php get_template_part( 'snippets/snippet', 'chapters' ); ?>
+        
+        <?php include_once( 'snippets/snippet-chapters.php' ); /*  include_once( 'fonts.php' ); */ ?>
 
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
