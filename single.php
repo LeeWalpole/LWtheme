@@ -19,18 +19,19 @@
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
 
-<style>
-#chapters {
-    display:none;
-}
-#chapters.chapters {
-    display:block;
-}
-</style>
+        <style>
+        #chapters {
+            display: none;
+        }
 
-<aside id="chapters" class="bg-black">
-    <!-- Chapters appear Below -->
-</aside>
+        #chapters.chapters {
+            display: block;
+        }
+        </style>
+
+        <aside id="chapters" class="bg-black">
+            <!-- Chapters appear Below -->
+        </aside>
 
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
