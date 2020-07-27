@@ -36,7 +36,7 @@
     */?>
 
 <style>
-s { text-decoration: line-through!important; /* strikethrough text*/  }
+s { text-decoration: line-through!important; /* strikethrough text*/ }
 </style>
 
 </head>
