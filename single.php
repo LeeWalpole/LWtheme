@@ -19,8 +19,10 @@
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
 
-            <p>Chapters 2</p>
-        <?php include_once( 'snippets/snippet-chapters.php' ); /*  include_once( 'fonts.php' ); */ ?>
+        <?php get_template_part( 'snippets/snippet', 'chapters' ); ?>
+
+
+        <?php // include_once( 'snippets/snippet-chapters.php' ); /*  include_once( 'fonts.php' ); */ ?>
         
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
