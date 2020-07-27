@@ -8,6 +8,9 @@
 .article-body >*:not(figure) { padding: 0 var(--padding);
 }
 
+.article-body img { 
+    max-width:100%!important;
+}
 
 .article-body > h2, .article-body > h3,
 .article-body > h4, .article-body > h5, .article-body > h6
