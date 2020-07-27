@@ -20,9 +20,10 @@
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
 
 
+        <?php 
+$post_id = false;
+$chapter_status = get_field('chapter_status',$post_id); 
 
-
-        <?php $chapter_status = get_field('chapter_status'); 
         if ($chapter_status == "on") : ?>
          <?php echo $chapter_status; ?>
                 <aside id="chapters" class="bg-black chapters">
