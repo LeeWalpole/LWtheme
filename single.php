@@ -1,7 +1,4 @@
 <?php get_header(); // includes nav and hero ?>
-<style>
-s { text-decoration: line-through!important; /* strikethrough text*/ }
-</style>
 <?php if ( have_posts() ) :  while ( have_posts() ) : the_post();  ?>
 
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
