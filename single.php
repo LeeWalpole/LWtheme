@@ -18,9 +18,8 @@
             <?php } ?>
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
-        <aside id="chapters" class="bg-black chapters">
-            <!-- Chapters appear Below -->
-        </aside>
+        <?php get_template_part( 'snippets/snippet', 'chapters' ); ?>
+
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
     </article>

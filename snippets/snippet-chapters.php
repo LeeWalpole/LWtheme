@@ -4,7 +4,11 @@ $chapter_status = get_field('chapter_status',$post_id);
 $chapter_prefix = get_field('chapter_prefix',$post_id); 
 $chapter_tag = get_field('chapter_tag',$post_id); // for some reason this didn't work
 ?>
+
 <?php switch ($chapter_status) : case "on": ?>
+    <aside id="chapters" class="bg-black chapters">
+        <!-- Chapters appear Below -->
+    </aside>
   <script>
   chapters: {
       // only run if ID chapters exists
