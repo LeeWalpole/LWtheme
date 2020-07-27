@@ -84,3 +84,16 @@ $chapter_tag = get_field('chapter_tag',$post_id); // for some reason this didn't
 <?php break; default: ?>
 <!-- Default Chapters -->
 <?php endswitch; ?>
+
+
+<?php 
+$post_id = false;
+$chapter_status = get_field('chapter_status',$post_id); 
+
+        if ($chapter_status == "on") : ?>
+         <?php echo $chapter_status; ?>
+                <aside id="chapters" class="bg-black chapters">
+            <!-- Chapters appear Below -->
+        </aside>
+       
+        <?php endif; ?>
