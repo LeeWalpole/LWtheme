@@ -75,3 +75,6 @@
             padding-left:var(--padding);
             padding-right:var(--padding);
         }
+
+
+s { text-decoration: line-through; /* strikethrough text*/ }

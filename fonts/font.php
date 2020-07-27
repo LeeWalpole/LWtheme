@@ -39,6 +39,7 @@
 --bold: bold;    
 --heavy: 900;
 }
+s { text-decoration: line-through; /* strikethrough text*/ }
 </style>
 <!-- new font tweaks??? -->
 <!-- new font tweaks??? -->
