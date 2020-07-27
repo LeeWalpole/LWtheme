@@ -1,16 +1,8 @@
 </main>
 
 <?php // get_template_part( 'snippets/snippet-hero' ); ?>
-
-<?php
-/*
-
-
-*/
-?>
-
+<?php include_once( 'snippets/snippet-chapters.php' ); /*  include_once( 'fonts.php' ); */ ?>
 <?php get_template_part( 'snippets/snippet', 'footer' ); // col-1 ?>
-<?php // include_once( 'snippets/snippet-chapters.php' ); /*  include_once( 'fonts.php' ); */ ?>
 
     <script>
         window.addEventListener('load', function () {
