@@ -56,6 +56,7 @@ $chapter_tag = get_field('chapter_tag',$post_id); // for some reason this didn't
 
               let chapters = document.getElementById("chapters");
               chapters.appendChild(chaptersBox); // add list box to sidebar
+              chapters.classList.add("chapters");
           }
           // .grab the following tag inside article-body (tag_selector)
           generateChapters("<?php echo $chapter_tag; ?>");

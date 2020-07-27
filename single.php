@@ -19,20 +19,18 @@
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
 
-        <?php 
-$post_id = false;
-$chapter_status = get_field('chapter_status',$post_id); 
-$chapter_prefix = get_field('chapter_prefix',$post_id); 
-$chapter_tag = get_field('chapter_tag',$post_id); // for some reason this didn't work
-?>
-<?php switch ($chapter_status) : case "on": ?>
+<style>
+#chapters {
+    display:none;
+}
+#chapters.chapters {
+    display:block;
+}
+</style>
 
-<aside id="chapters" class="bg-black chapters">
+<aside id="chapters" class="bg-black">
     <!-- Chapters appear Below -->
 </aside>
-<?php break; default: ?>
-No chapters
-<?php endswitch; ?>
 
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
