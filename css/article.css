@@ -5,6 +5,8 @@
     width:100%;
 }
 
+
+
 .article-body >*:not(figure) { padding: 0 var(--padding);
 }
 
@@ -78,7 +80,12 @@ color:var(--color);
 .article-body >*:not(figure) { padding: 0 var(--padding);
 }
 
+
+
+
 /* Lists */
+
+
 .article-body ul:not(.sharers-horizontal), .article-body ol {
     list-style-position: inside;
     margin-bottom:var(--padding-big);

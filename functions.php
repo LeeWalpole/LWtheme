@@ -23,6 +23,7 @@ function wpdocs_theme_setup() {
     add_image_size( 'tablet', 768, false ); // Tablet Full
     add_filter('img_caption_shortcode_width', '__return_false');
     }
+    include_once( 'functions/acf.php' );
     include_once( 'functions/acf-options.php' );
     include_once( 'functions/postlist-thumbnails.php' );
     // include_once( 'functions/header-junk.php' );
