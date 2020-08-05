@@ -8,23 +8,15 @@ $layout = get_sub_field('layout');
 $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
-<?php if ( is_front_page() ) : ?>
-<?php $posts = get_posts(array(
+
+<?php 
+    $posts = get_posts(array(
     'post_type'			=> 'post',
     'posts_per_page' => 1,
     'offset' => 0,
     'tag_id' => $teaser_tag, 
-    'tag__not_in' => get_tag_id_by_name('Featured'),
-    'category' => $teaser_category ) ); ?>
-<?php else : ?>
-    <?php $posts = get_posts(array(
-    'post_type'			=> 'post',
-    'posts_per_page' => 1,
-    'offset' => 0,
-    'tag_id' => $teaser_tag, 
-    'category' => $teaser_category ) ); ?>
-<?php endif; ?>
-<?php if( $posts ): ?>
+    'category' => $teaser_category ) ); 
+    if( $posts ): ?>
 
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max showcase">
