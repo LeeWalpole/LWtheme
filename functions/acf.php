@@ -2386,6 +2386,25 @@ if( function_exists('acf_add_local_field_group') ):
                 'append' => '',
                 'maxlength' => '',
             ),
+            array(
+                'key' => 'field_5f2acf6b54c42',
+                'label' => 'Google Analytics',
+                'name' => 'google_analytics',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => 'Example: UA-51103247-2',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
         ),
         'location' => array(
             array(
