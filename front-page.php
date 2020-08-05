@@ -107,9 +107,6 @@
 
 <?php wp_reset_postdata(); ?>
 
-
-<?php wp_reset_postdata(); ?>
-
 <?php get_template_part( 'blocks/blocks' ); ?>
 
 <?php get_template_part( 'snippets/newsletter' ); ?>
