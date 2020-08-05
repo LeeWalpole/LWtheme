@@ -10,7 +10,9 @@ query_posts('showposts=5');
 while ( have_posts() ) : the_post();
     $do_not_duplicate[] = $post->ID; // remember ID's in loop
     // display post ...
-    echo "<p>".the_title()."</p>";
+    echo "<br><p>";
+    the_title();
+    echo "</p>";
 endwhile;
 ?>
 <hr>
@@ -20,7 +22,9 @@ query_posts( 'showposts=15' );
 while (have_posts()) : the_post();
     if ( !in_array( $post->ID, $do_not_duplicate ) ) { // check IDs     
 // display posts ...
-echo "<p>".the_title()."</p>";
+echo "<br><p>";
+the_title();
+echo "</p>";
     }
 endwhile;
 ?>
