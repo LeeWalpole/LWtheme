@@ -16,8 +16,8 @@ function cleanup() {
   remove_action('wp_head', 'wp_resource_hints', 2);
   remove_action('wp_head', 'rel_canonical');
   remove_action('wp_head', 'rel_alternate');
-  remove_action('wp_head', 'wp_oembed_add_discovery_links');
-  remove_action('wp_head', 'wp_oembed_add_host_js');
+  // remove_action('wp_head', 'wp_oembed_add_discovery_links');
+  // remove_action('wp_head', 'wp_oembed_add_host_js');
   remove_action('wp_head', 'rest_output_link_wp_head');
   remove_action('rest_api_init', 'wp_oembed_register_route');
   remove_action('wp_print_styles', 'print_emoji_styles');
