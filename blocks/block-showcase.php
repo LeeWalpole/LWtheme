@@ -14,7 +14,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     'posts_per_page' => 1,
     'offset' => 0,
     'tag_id' => $teaser_tag, 
-    'tag__not_in' => array('featured'),
+    'tag__not_in' => array( get_tag_id_by_name('featured') ),
     'category' => $teaser_category ) ); ?>
 <?php else : ?>
     <?php $posts = get_posts(array(
