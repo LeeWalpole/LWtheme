@@ -18,16 +18,6 @@
         </header>
         <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
 
-        <style>
-        #chapters {
-            display: none;
-        }
-
-        #chapters.chapters {
-            display: block;
-        }
-        </style>
-
         <aside id="chapters" class="bg-black">
             <!-- Chapters appear Below -->
         </aside>

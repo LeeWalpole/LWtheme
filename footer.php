@@ -39,15 +39,11 @@ filter: brightness(75%);
 
     <script>
         blockquote: {
-
             // Get all <p> elements in the document
             var x = document.querySelectorAll(".article-body blockquote");
             var i;
             for (i = 0; i < x.length; i++) {
-
                 //        x[i].style.backgroundColor = "red";
-
-
                 x[i].innerHTML = `
             <svg class="icon">
             <use xlink:href="#quote"></use>
@@ -55,11 +51,8 @@ filter: brightness(75%);
          ` + x[i].innerHTML;
             }
         }
-
         let blockquotes = document.querySelectorAll('.wp-block-pullquote');
-
         blockquotes.forEach(function (blockquote) {
-
             blockquote.document.createElement("h5");
             blockquote.textContent = "Hello";
             blockquotes.appendChild(blockquote);

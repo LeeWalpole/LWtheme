@@ -1,7 +1,14 @@
+#chapters {
+    display: none;
+}
+
+#chapters.chapters {
+    display: block;
+}
+
 #chapters { 
     padding:var(--padding);
 }
-
 
 #chapters-box { 
     margin:0; padding:0;
