@@ -1,5 +1,5 @@
 
-<?php $color_primary = get_field('color_primary','options'); ?>
+<?php $color_primary = get_field('primary_color','options'); ?>
 <?php echo "<style>
 :root {
     --color: #".$color_primary.";
