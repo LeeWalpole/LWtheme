@@ -14,10 +14,15 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
     
     <script src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/dist/min.js?v=004"></script>
-    <?php 
-    $color = "#ee0099";
-    $color_shade = "#dd0099";
-    ?>
+
+<?php $color = get_field('primary_color','options'); ?>
+<style>
+.quote_overlap { 
+-webkit-filter: brightness(75%);
+filter: brightness(75%);
+}
+</style>
+
     <svg class="quotemark hidden" width="0" height="0">
         <symbol viewBox="73.5 9.3 488.3 400.3" id="quote">
             <path fill="<?php echo esc_attr($color); ?>"
@@ -26,7 +31,7 @@
             <path fill="<?php echo esc_attr($color); ?>"
                 d="M560.3 260.7C551 199 498.6 155.1 438.7 152c15.1-55.5 51.1-77.2 95-90.1 4.4-1.3 3.6-5.8 3.6-5.8l-7.1-44s-.9-3.6-6.2-2.7C372.1 26.3 269.1 142.2 288.2 282.9c17.8 97.2 93.7 135 164.3 125.2 70.1-12 118.5-77.2 107.8-147.4z">
             </path>
-            <path fill="<?php echo esc_attr($color_shade); ?>"
+            <path class="quote_overlap" fill="<?php echo esc_attr($color); ?>"
                 d="M347.2 260.7c-5.3-35.1-24-64.4-49.7-83.9-10.7 32.4-14.7 68.4-9.3 105.7 5.8 32 17.8 57.3 33.7 76.8 21.3-27.1 31.6-62.2 25.3-98.6z">
             </path>
         </symbol>
