@@ -2,34 +2,28 @@
 
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
-<?php
-$do_not_duplicate = array(); // set befor loop variable as array
-
-// 1. Loop
-query_posts('showposts=5');
-while ( have_posts() ) : the_post();
-    $do_not_duplicate[] = $post->ID; // remember ID's in loop
-    // display post ...
-    echo "<br><p>";
-    the_title();
-    echo "</p>";
-endwhile;
-?>
-<hr>
-<?php
-// 2. Loop
-query_posts( 'showposts=15' );
-while (have_posts()) : the_post();
-    if ( !in_array( $post->ID, $do_not_duplicate ) ) { // check IDs     
-// display posts ...
-echo "<br><p>";
-the_title();
-echo "</p>";
-    }
-endwhile;
-?>
-
-
+<?php if(have_posts()) :
+  // Loop#1
+  $rp_query = new WP_Query('posts_per_page=4');
+  while ($rp_query->have_posts()) :
+    $rp_query->the_post(); ?>
+    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <?php the_excerpt();
+  endwhile;
+endif; ?>
+  
+  <?php if(have_posts()) :
+  // Loop#2 for category ID 23
+  $sm_query = new WP_Query(array(
+    'category'  =>  "Grooming",
+    'posts_per_page'  =>  3
+  ));
+  while ($sm_query->have_posts()) :
+    $sm_query->the_post(); ?>
+    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <?php the_excerpt();
+  endwhile;
+endif; ?>
 
 
 <?php get_template_part( 'blocks/blocks' ); ?>
