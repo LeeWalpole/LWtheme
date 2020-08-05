@@ -27,6 +27,7 @@
     <?php // get_template_part( 'snippets/snippet', 'fonts' ); // col-1 ?>
     <!-- Load Fonts below -->
     <?php include_once( 'fonts/font.php' ); /*  include_once( 'fonts.php' ); */ ?>
+    <?php include_once( 'css/variables.php' ); /*  include_once( 'fonts.php' ); */ ?>
     <?php echo "<style>"; include_once( 'dist/min.css' ); echo "</style>"; ?>
     <?php /*
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/min.css?ver=001" as="style"
