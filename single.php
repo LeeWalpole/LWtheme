@@ -1,4 +1,12 @@
 <?php get_header(); // includes nav and hero ?>
+
+<style>
+.article-body img  { 
+max-width:100%!important;
+object-fit:contain!important;
+} 
+</style>
+
 <?php if ( have_posts() ) :  while ( have_posts() ) : the_post();  ?>
 
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
