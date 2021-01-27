@@ -6,6 +6,10 @@ width:100%!important;
 object-fit:contain!important;
 height:auto;
 } 
+
+.article-body a  { 
+color:var(--color);
+} 
 </style>
 
 <?php if ( have_posts() ) :  while ( have_posts() ) : the_post();  ?>
