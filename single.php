@@ -7,8 +7,8 @@ object-fit:contain!important;
 height:auto;
 } 
 
-.article-body a  { 
-color:var(--color);
+.article-body > p > a  { 
+color:#ee0099;
 } 
 </style>
 
