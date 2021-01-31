@@ -18,8 +18,8 @@ $feature_youtube = get_field('feature_youtube');
 ?>
 
             <?php if( $wp_query->current_post  <= 0 ) : ?>
-            <a href="https://www.lads.guide/learn/how-to-clean-shave/" title="Learn how to clean shave"
-                value="Learn how to clean shave">
+            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
+                value="<?php echo esc_attr($headline); ?>">
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
                     data-ratio="3x2">
                     <picture>
