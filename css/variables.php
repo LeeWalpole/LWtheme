@@ -5,8 +5,8 @@ $color_secondary = get_field('color_secondary','options') ?: "ff0099";
 ?>
 <?php echo "<style>
 :root {
-    --color:# ".esc_attr($color_primary)."!important;
-    --color:# ".esc_attr($color_secondary)."!important;
+    --color:#".esc_attr($color_primary)."!important;
+    --color:#".esc_attr($color_secondary)."!important;
     --color-black: #0a0b0c;
     --color-white: #fff;
     --color-offblack: #3a3b3c;
