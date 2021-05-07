@@ -40,6 +40,7 @@
 s { text-decoration: line-through!important; /* strikethrough text*/ }
 </style>
 
+
 </head>
 
 <body id="body" class="body prescroll">
