@@ -46,9 +46,3 @@ s { text-decoration: line-through!important; /* strikethrough text*/ }
 <body id="body" class="body prescroll">
     <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
-
-    
-
-    <?php 
-
-?>
