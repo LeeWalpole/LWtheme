@@ -8,6 +8,10 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="robots" content="follow, index" />
+    <?php $redirect_url = get_field('redirect_url'); if ($redirect_url) :  ?>
+    <?php header("Location:".echo $redirect_url;."", true, 301); exit(); ?>
+    <link rel="canonical" href="<?php echo esc_attr($redirect_url); ?>" />
+    <?php endif; // end if redirect_url  ?>
     <?php wp_head(); ?>
     <?php if ( has_post_thumbnail() ) : ?>
     <link rel="preload" as="image" href="<?php echo esc_attr($hero_image_smartphone = get_the_post_thumbnail_url(get_the_ID(),'thumbnail')); ?>">
@@ -46,3 +50,11 @@ s { text-decoration: line-through!important; /* strikethrough text*/ }
 <body id="body" class="body prescroll">
     <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
+
+    
+
+    <?php 
+
+?>
+
+<?php } // end hero header conditions ?>
