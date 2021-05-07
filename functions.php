@@ -30,5 +30,4 @@ function wpdocs_theme_setup() {
     include_once( 'functions/lazyload-images.php' );
     include_once( 'functions/read-time.php' );
     include_once( 'functions/lazyload-video.php' );
-    add_filter('acf/settings/show_admin', 'my_acf_show_admin');
 ?>
