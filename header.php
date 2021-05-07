@@ -46,13 +46,13 @@ s { text-decoration: line-through!important; /* strikethrough text*/ }
 <body id="body" class="body prescroll">
 
 <?php 
-$color_primary = get_field('primary_color','options') ?: "ff0099"; 
-$color_secondary = get_field('secondary_colour','options') ?: "ff0099"; 
+$color_primary = get_field('color_primary','options') ?: "#ee0099"; 
+$color_secondary = get_field('color_secondary','options') ?: "#ff0099"; 
 ?>
 <?php echo "<style>
 :root {
-    --color: #".$color_primary."!important;
-    --color: #".$color_secondary."!important;
+    --color: ".esc_attr($color_primary)."!important;
+    --color: ".esc_attr($color_secondary)."!important;
     --color-black: #0a0b0c;
     --color-white: #fff;
     --color-offblack: #3a3b3c;
@@ -69,3 +69,16 @@ echo "</style>";
 
     <?php get_template_part( 'snippets/snippet', 'nav' ); ?>
     <main>
+
+
+    <?php $google_analytics = get_field('google_analytics','options'); ?>
+<?php if($google_analytics) : ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr($google_analytics); ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '<?php echo esc_attr($google_analytics); ?>');
+</script>
+<?php endif; ?>
