@@ -1,12 +1,12 @@
 
 <?php 
-$color_primary = get_field('primary_color','options') ?: "ff0099"; 
-$color_secondary = get_field('secondary_colour','options') ?: "ff0099"; 
+$color_primary = get_field('color_primary','options') ?: "ee0099"; 
+$color_secondary = get_field('color_secondary','options') ?: "ff0099"; 
 ?>
 <?php echo "<style>
 :root {
-    --color: #".$color_primary."!important;
-    --color: #".$color_secondary."!important;
+    --color:# ".esc_attr($color_primary)."!important;
+    --color:# ".esc_attr($color_secondary)."!important;
     --color-black: #0a0b0c;
     --color-white: #fff;
     --color-offblack: #3a3b3c;
