@@ -31,7 +31,4 @@ function wpdocs_theme_setup() {
     include_once( 'functions/read-time.php' );
     include_once( 'functions/lazyload-video.php' );
     add_filter('acf/settings/show_admin', 'my_acf_show_admin');
-    function my_acf_show_admin( $show ) {
-    return current_user_can('manage_options');
-}
 ?>
