@@ -1,7 +1,7 @@
 
 <?php 
-$color_primary = get_field('primary_color','options') ?: "ffee00"; 
-$color_secondary = get_field('secondary_colour','options') ?: "ffee00"; 
+$color_primary = get_field('primary_color','options') ?: "ff0099"; 
+$color_secondary = get_field('secondary_colour','options') ?: "ff0099"; 
 ?>
 <?php echo "<style>
 :root {
