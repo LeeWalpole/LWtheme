@@ -52,5 +52,3 @@ s { text-decoration: line-through!important; /* strikethrough text*/ }
     <?php 
 
 ?>
-
-<?php } // end hero header conditions ?>
