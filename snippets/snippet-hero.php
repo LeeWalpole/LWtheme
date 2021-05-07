@@ -1,3 +1,5 @@
+<?php $hero_html = get_field('hero_html');  ?>
+
 <?php if (is_single() ) { ?>
 
 <?php 
@@ -42,7 +44,6 @@ $hero_kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $hero_headline = get_field('hero_headline') ?: get_the_title(); 
 $headline = '<h2 class="headline">'.$hero_headline.'</h2>';
 $hero_subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$hero_html = get_field('hero_html'); 
 ?>
 
 <?php } // end hero header conditions ?>
