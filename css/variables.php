@@ -23,8 +23,9 @@ echo "</style>";
 @media only screen and (min-width: 768px) 
     {
     :root {
-        --article-title: calc(var(--p) + 25%)!important;
-        --article-description: calc(var(--p) + 10%)!important;
+        --article-title: calc(var(--p) + 60%)!important;
+        --article-headline-line: 1.4;
+        --article-description: calc(var(--p) + 20%)!important;
     } 
 }
 </style>
