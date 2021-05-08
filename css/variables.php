@@ -20,12 +20,41 @@ $color_secondary = get_field('color_secondary','options') ?: "ff0099";
 echo "</style>";
 ?>
 <style>
-@media only screen and (min-width: 768px) 
-    {
-    :root {
-        --article-title: calc(var(--p) + 60%)!important;
-        --article-headline-line: 1.4;
-        --article-description: calc(var(--p) + 20%)!important;
-    } 
+        :root {
+
+--hero-headline: calc(var(--p) + 100%)!important;
+--hero-subheadline: calc(var(--p) + 25%)!important;
+
+--article-title: calc(var(--p) + 100%)!important;;
+--article-description: calc(var(--p) + 25%)!important;;
+
+/* --article-headline-line: 1.4; */
+
 }
+
+@media (min-width:768px) {
+:root {    
+--hero-headline: calc(var(--p) + 250%)!important;
+--hero-subheadline: calc(var(--p) + 25%)!important;
+
+--article-title: calc(var(--p) + 100%)!important;;
+--article-description: calc(var(--p) + 25%)!important;;
+}
+}
+
+.hero .header .headline { 
+text-transform: uppercase;
+font-family: var(--font1-heavy)!important;;
+line-height: normal!important;
+}
+
+.article-body>.header>.title { 
+font-family: var(--font1-heavy)!important;
+line-height: 1.4!important;
+}
+
+.prescroll .nav-bar img  {  
+filter: brightness(0)!important;
+}
+
 </style>
