@@ -20,9 +20,10 @@ $color_secondary = get_field('color_secondary','options') ?: "ff0099";
 echo "</style>";
 ?>
 <style>
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) 
+    {
     :root {
-        --article-title: calc(var(--article-headline) + 50%)!important;
+        --article-title: calc(var(--p) + 25%)!important;
         --article-description: calc(var(--p) + 10%)!important;
     } 
 }
