@@ -22,8 +22,8 @@ echo "</style>";
 <style>
 @media (min-width: 768px) {
     :root {
-        --article-title: calc(var(--article-headline) + 50%);
-        --article-description: calc(var(--p) + 10%);
+        --article-title: calc(var(--article-headline) + 50%)!important;
+        --article-description: calc(var(--p) + 10%)!important;
     } 
 }
 </style>
