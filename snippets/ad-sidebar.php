@@ -1,6 +1,7 @@
 <?php
 $ad_type_sidebar = get_field('ad_type_sidebar');
 switch ($ad_type_sidebar) : case "google_adsense": ?>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <aside class="colspan-4 bg-white sidebar">
     <figure class="bg-color ratio sticky-sidebar" data-ratio="1x1">
         <?php 
@@ -48,9 +49,10 @@ switch ($ad_type_sidebar) : case "google_adsense": ?>
     </figure>
     </figure>
 </aside>
-<?php } else echo "Ad image / URL missing??"; ?>
+<?php } else { } ?>
 
 <?php break; default: // default too google adsense if it exists... ?>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <aside class="colspan-4 bg-white sidebar">
     <figure class="bg-color ratio sticky-sidebar" data-ratio="1x1">
         <?php 

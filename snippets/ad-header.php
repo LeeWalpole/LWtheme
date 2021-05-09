@@ -10,7 +10,6 @@ img {
     <figure class="w-safe center advertisement">
 
 
-
         <?php
     $ad_type = get_field('ad_type');
     switch ($ad_type) : case "google_adsense": ?>
