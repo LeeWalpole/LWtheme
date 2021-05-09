@@ -18,6 +18,9 @@ color:#ee0099;
 <?php get_template_part( 'snippets/snippet-feature' ); ?>
 
 <?php if ( !empty( get_the_content() ) ) : ?>
+
+    <?php get_template_part( 'snippets/ad', 'header' ); ?>
+
 <section class="row-block bg-white grid grid-gap w-max">
     <?php get_template_part( 'snippets/snippet', 'side-sharers' ); // col-1 ?>
     <article class="article-body w-safe colspan-7">
@@ -38,7 +41,7 @@ color:#ee0099;
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
     </article>
-    <?php get_template_part( 'snippets/snippet', 'side-ad' ); // col-4 ?>
+    <?php get_template_part( 'snippets/ad', 'side' ); ?>
 </section>
 <?php endif; ?>
 <?php endwhile; endif; ?>
