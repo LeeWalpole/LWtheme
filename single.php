@@ -41,7 +41,7 @@ color:#ee0099;
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
     </article>
-    <?php get_template_part( 'snippets/ad', 'side' ); ?>
+    <?php get_template_part( 'snippets/ad', 'sidebar' ); ?>
 </section>
 <?php endif; ?>
 <?php endwhile; endif; ?>
