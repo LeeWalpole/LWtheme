@@ -1,7 +1,3 @@
-<aside class="colspan-4 bg-white sidebar">
-    <figure class="bg-color ratio sticky-sidebar" data-ratio="1x1">Lads Holiday Guide</figure>
-</aside>
-
 <?php
 $ad_type_sidebar = get_field('ad_type_sidebar');
 switch ($ad_type_sidebar) : case "google_adsense": ?>
@@ -28,8 +24,8 @@ switch ($ad_type_sidebar) : case "google_adsense": ?>
 <?php
         $ad_link = get_sub_field( 'ad_link' );
         $ad_image = get_sub_field('ad_image');
-        $ad_image_smartphone = wp_get_attachment_image_src($ad_image, 'crop-360')[0]; 
-        $ad_image_desktop = wp_get_attachment_image_src($ad_image, 'crop-360')[0]; 
+        $ad_image_smartphone = wp_get_attachment_image_src($ad_image, 'medium')[0]; 
+        $ad_image_desktop = wp_get_attachment_image_src($ad_image, 'medium')[0]; 
         ?>
 <?php endwhile; ?>
 <?php endif; ?>
