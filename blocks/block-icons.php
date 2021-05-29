@@ -20,6 +20,72 @@
     </section>
 </div>
 
+<style>
+            .icons {
+                width: 100%;
+                margin: 0 auto;
+background:yellow;
+            }
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+
+
+
+
+    .icons {  
+
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+    }
+
+@media (min-width: 768px){ 
+  .icons {  
+    display: flex;
+    justify-content: space-around!important;
+    align-content: flex-start!important;
+    flex-wrap: wrap!important;
+    list-style: none;
+    text-align: center!important;
+    background:green;
+    flex-direction: row;
+    }
+}
+
+.icon {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: red;
+padding:var(--padding);
+text-align: center;
+}
+
+.icon svg { 
+    font-size: 72px;
+    margin-bottom:var(--padding-small);
+}
+
+@media (min-width: 768px){ 
+    .icon {
+        flex-basis: 33%!important;
+    }
+
+}
+
+.icon:hover {
+    color: white;
+    background-color: red;
+}
+
+.icon p {
+    color: #000;
+}
+
+
+        </style>
 
 
 
@@ -35,7 +101,7 @@
 
                 <?php if( have_rows('icon') ): ?>
                 <?php while( have_rows('icon') ): the_row(); ?>
-                Hello
+             
                 <?php 
 $kicker = get_sub_field('kicker');
 $headline = get_sub_field('headline');
@@ -48,7 +114,7 @@ $link_title = $link['title'];
 ?>
 
 
-                <figure class="colspan-4 mobspan-6 icon">
+                <figure class="icon">
                     <a href="<?php echo $link['url']; ?>" title="<?php echo esc_attr($link_title); ?>"
                         target="<?php echo esc_attr( $link_target ); ?>">
                         <!-- <i class="fas fa-beer grow icon-large"></i> -->
