@@ -47,10 +47,10 @@ color:#ee0099;
 <?php endwhile; endif; ?>
 
 <article>
-    <?php get_template_part( 'blocks/blocks' ); ?>
+    <?php get_template_part( 'blocks','blocks' ); ?>
 </article>
 
-<?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
+<?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
 <?php get_footer();  ?>
 
