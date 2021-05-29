@@ -48,7 +48,7 @@ color:#ee0099;
 
 <article>
 
-    <?php get_template_part( 'blocks/blocks' ); ?>
+<?php get_template_part( 'blocks/blocks' ); ?>
 
 </article>
 
