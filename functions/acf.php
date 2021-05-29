@@ -1,6 +1,5 @@
 <?php 
 if( function_exists('acf_add_local_field_group') ):
-
     acf_add_local_field_group(array(
         'key' => 'group_5ed21568cdc2f',
         'title' => 'Block - Teaser Settings',
@@ -1612,96 +1611,6 @@ if( function_exists('acf_add_local_field_group') ):
                 'ajax' => 0,
                 'placeholder' => '',
             ),
-                    array(
-                        'key' => 'field_5eba9eab61bf4',
-                        'label' => 'Teaser Settings',
-                        'name' => 'teaser_settings',
-                        'type' => 'group',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'layout' => 'table',
-                        'sub_fields' => array(
-                            array(
-                                'key' => 'field_5eb770f334e77',
-                                'label' => 'Teaser Styles',
-                                'name' => 'teaser_styles',
-                                'type' => 'select',
-                                'instructions' => '',
-                                'required' => 0,
-                                'conditional_logic' => 0,
-                                'wrapper' => array(
-                                    'width' => '',
-                                    'class' => '',
-                                    'id' => '',
-                                ),
-                                'choices' => array(
-                                    'standard_teasers' => 'Standard Teasers',
-                                    'puff_teasers' => 'Puff Teasers',
-                                    'image_teasers' => 'Image (only)',
-                                    'split_teasers' => 'Split Teasers',
-                                    'category_grid' => 'Category Grid Teasers',
-                                ),
-                                'default_value' => false,
-                                'allow_null' => 0,
-                                'multiple' => 0,
-                                'ui' => 0,
-                                'return_format' => 'value',
-                                'ajax' => 0,
-                                'placeholder' => '',
-                            ),
-                            array(
-                                'key' => 'field_5eba498e482ed',
-                                'label' => 'Teaser Ratio',
-                                'name' => 'teaser_ratio',
-                                'type' => 'select',
-                                'instructions' => '',
-                                'required' => 0,
-                                'conditional_logic' => 0,
-                                'wrapper' => array(
-                                    'width' => '',
-                                    'class' => '',
-                                    'id' => '',
-                                ),
-                                'choices' => array(
-                                    '3x2' => 'Default / Standard',
-                                    '1x1' => '1x1 (Square)',
-                                ),
-                                'default_value' => false,
-                                'allow_null' => 0,
-                                'multiple' => 0,
-                                'ui' => 0,
-                                'return_format' => 'value',
-                                'ajax' => 0,
-                                'placeholder' => '',
-                            ),
-                        ),
-                    ),
-                ),
-                'location' => array(
-                    array(
-                        array(
-                            'param' => 'user_role',
-                            'operator' => '==',
-                            'value' => 'subscriber',
-                        ),
-                    ),
-                ),
-                'menu_order' => 0,
-                'position' => 'normal',
-                'style' => 'default',
-                'label_placement' => 'top',
-                'instruction_placement' => 'label',
-                'hide_on_screen' => '',
-                'active' => true,
-                'description' => '',
-
-
             array(
                 'key' => 'field_5f05fbeb90f9b',
                 'label' => 'Feature YouTube',
