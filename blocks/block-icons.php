@@ -1,4 +1,8 @@
-<?php include ('block-settings.php'); ?>
+<h1>block-icons.php (below)</h1>
+
+<?php
+/*
+include ('block-settings.php'); ?>
 
 <?php if( have_rows('icon_settings') ) :  while( have_rows('icon_settings') ): the_row(); ?>
 <?php $teaser_ratio = get_sub_field('teaser_ratio');?>
@@ -47,4 +51,6 @@
         </article>
     </section>
 </div>
-<?php } // block layout ?>
+<?php } */ // block layout ?>
+
+<h1>block-icons.php (above)</h1>
