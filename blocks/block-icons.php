@@ -1,5 +1,7 @@
 <h1>block-icons.php (below)</h1>
 
+<?php include ('block-settings.php'); ?>
+
 <?php
 /*
 include ('block-settings.php'); ?>
