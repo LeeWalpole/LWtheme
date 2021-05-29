@@ -9,7 +9,7 @@
             <div class="grid icons <?php // echo $bg_color; ?>">
                 <?php //  include ('block-icon.php'); ?>
 
-hello
+hello and goodbye?
 
                 
             </div>
