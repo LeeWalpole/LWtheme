@@ -21,8 +21,8 @@
 
 <?php if( have_rows('icons') ): ?>
     <?php while( have_rows('icons') ): the_row(); ?>
-        <?php if( have_rows('icons') ): ?>
-            <?php while( have_rows('icons') ): the_row(); ?>
+        <?php if( have_rows('icon') ): ?>
+            <?php while( have_rows('icon') ): the_row(); ?>
             Hello
             <?php 
 $kicker = get_sub_field('kicker');
