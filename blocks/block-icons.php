@@ -95,11 +95,11 @@ text-align: center;
 <div id="<?php echo esc_attr($block_id); ?>" class="row-block prefade <?php echo esc_attr($bg_color); ?>">
     <section class="<?php echo esc_attr($width); ?> grid">
         <!-- .article-block -->
-        <?php while( have_rows('icons') ): the_row(); ?>
+
         <article class="article colspan-12">
             <?php include ('block-header.php'); ?>
             <div class="icons <?php echo $bg_color; ?>">
-
+            <?php while( have_rows('icons') ): the_row(); ?>
                 <?php if( have_rows('icon') ): ?>
                 <?php while( have_rows('icon') ): the_row(); ?>
              
@@ -130,9 +130,10 @@ $link_title = $link['title'];
                 </figure>
                 <?php endwhile; ?>
                 <?php endif; ?>
+                <?php endwhile; ?>
             </div>
         </article>
-        <?php endwhile; ?>
+      
     </section>
 </div>
 
