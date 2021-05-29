@@ -11,9 +11,9 @@
                 <?php //  include ('block-icon.php'); ?>
 
                 <?php global $post; if( have_rows('icons') ) : ?>
-                <?php while( have_rows('icons',$post->ID) ) : the_row();  ?>
+                <?php while( have_rows('icons') ) : the_row();  ?>
                 <?php // $counter = 0;?>
-                <?php if( have_rows('icon',$post->ID) ) : while( have_rows('icon') ) : the_row(); $counter++; ?>
+                <?php if( have_rows('icon') ) : while( have_rows('icon') ) : the_row(); $counter++; ?>
                 <?php 
 $kicker = get_sub_field('kicker');
 $headline = get_sub_field('headline');
