@@ -97,7 +97,7 @@ text-align: center;
         <!-- .article-block -->
         <article class="article colspan-12">
             <?php include ('block-header.php'); ?>
-            <div class="grid icons <?php echo $bg_color; ?>">
+            <div class="icons <?php echo $bg_color; ?>">
 
                 <?php if( have_rows('icon') ): ?>
                 <?php while( have_rows('icon') ): the_row(); ?>
