@@ -1,6 +1,5 @@
 <?php if(have_rows('blocks')):  while (have_rows('blocks')) : the_row();  ?>
 
-<?php /*
 <?php if( get_row_layout() == 'teasers' ) { ?>
 <?php get_template_part( 'blocks/block-teasers' ); ?>
 
@@ -31,7 +30,4 @@
 <?php } else {  
   //  relax();
     }  // end get_row_layout and do nothing ?>
-
-    */?>
-
 <?php endwhile; endif; ?>

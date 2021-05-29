@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 <?php include ('block-settings.php'); ?>
 
-<?php if( have_rows('icon_settings') ) : while( have_rows('icon_settings') ): the_row(); ?>
+<?php if( have_rows('icon_settings') ) :  while( have_rows('icon_settings') ): the_row(); ?>
 <?php $teaser_ratio = get_sub_field('teaser_ratio');?>
     <?php switch ($teaser_ratio) : case "3x2": ?>
     <?php $ratio = "3:2"; 
@@ -19,6 +18,7 @@
     ?>
     <?php endswitch; ?>
 <?php endwhile; endif; //teaser_settings ?>
+
 
 
 <?php if( $block_layout == 'sidebar') { ?>
@@ -48,5 +48,3 @@
     </section>
 </div>
 <?php } // block layout ?>
-=======
->>>>>>> parent of 0ca8bec (blocks)
