@@ -1,0 +1,44 @@
+
+        .bg-color {
+            background-color: var(--color)!important;
+        }
+
+        .bg-white {
+            background-color: var(--color-white)!important;
+        }
+
+        .bg-offwhite {
+            background-color: var(--color-offwhite)!important;
+        }
+
+        .bg-black {
+            background-color: var(--color-black)!important;
+        }
+
+        .bg-offblack {
+            background-color: var(--color-offblack);
+        }
+
+
+
+    .bg-white > .headline {
+        color:var(--color-black);
+    } 
+    .bg-white > * {
+        color:var(--color-grey);
+    } 
+
+    .bg-black > .headline {
+        color:var(--color-white);
+    } 
+
+    .bg-black > * {
+        color:var(--color-lightgrey);
+    } 
+
+    .color { color:var(--color)!important; }
+
+    /* 
+    body[data-color='blue'] {
+    } 
+    */

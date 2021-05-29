@@ -1,0 +1,11 @@
+ .fa-list {
+     list-style:none;
+
+ }
+
+ .fa-list li { 
+    line-height:2;
+ }
+
+
+ .fa-list li svg { margin-right:var(--padding-xsmall);}
