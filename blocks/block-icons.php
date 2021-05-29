@@ -2,12 +2,12 @@
 
 <?php include ('block-settings.php'); ?>
 
-<div id="<?php echo esc_attr($block_id); ?>" class="row-block prefade <?php echo esc_attr($bg_color); ?>">
-    <section class="<?php echo esc_attr($width); ?> grid"><!-- .article-block -->
+<div id="<?php // echo esc_attr($block_id); ?>" class="row-block prefade <?php // echo esc_attr($bg_color); ?>">
+    <section class="<?php // echo esc_attr($width); ?> grid"><!-- .article-block -->
         <article class="article colspan-12">
             <?php include ('block-header.php'); ?>
             <div class="grid icons <?php // echo $bg_color; ?>">
-                <?php // include ('block-icon.php'); ?>
+                <?php include ('block-icon.php'); ?>
             </div>
         </article>
     </section>
