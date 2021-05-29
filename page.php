@@ -46,6 +46,10 @@ color:#ee0099;
 <?php endif; ?>
 <?php endwhile; endif; ?>
 
+<article>
+    <?php get_template_part( 'blocks/blocks' ); ?>
+</article>
+
 <?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
 <?php get_footer();  ?>
@@ -74,6 +78,8 @@ color:#ee0099;
     <?php // get_template_part( 'snippets/snippet', 'side-ad' ); // col-4 ?>
     <?php endif; ?>
 
+
+    
     <?php get_template_part( 'blocks/blocks' ); ?>
 
 </article>
