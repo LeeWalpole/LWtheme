@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include ('block-settings.php'); ?>
 
 <?php if( have_rows('icon_settings') ) : while( have_rows('icon_settings') ): the_row(); ?>
@@ -47,3 +48,5 @@
     </section>
 </div>
 <?php } // block layout ?>
+=======
+>>>>>>> parent of 0ca8bec (blocks)
