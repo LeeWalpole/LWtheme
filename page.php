@@ -48,6 +48,7 @@ color:#ee0099;
 
 <<<<<<< HEAD
 <article>
+<<<<<<< HEAD
 
 <?php get_template_part( 'blocks/blocks' ); ?>
 
@@ -57,6 +58,12 @@ color:#ee0099;
 =======
 <?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 >>>>>>> parent of 1e65b08 (Page updated)
+=======
+    <?php get_template_part( 'blocks/blocks' ); ?>
+</article>
+
+<?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
+>>>>>>> parent of 20533a5 (added blocks to page)
 
 <?php get_footer();  ?>
 
