@@ -13,6 +13,8 @@
     </section>
 </div>
 
+<p>test</p>
+
 <?php
 /*
 include ('block-settings.php'); ?>
