@@ -1,5 +1,6 @@
 <?php 
 if( function_exists('acf_add_local_field_group') ):
+
     acf_add_local_field_group(array(
         'key' => 'group_5ed21568cdc2f',
         'title' => 'Block - Teaser Settings',
@@ -2395,37 +2396,18 @@ if( function_exists('acf_add_local_field_group') ):
             array(
                 'key' => 'field_5f29f845a8936',
                 'label' => 'Primary Color',
-                'name' => 'color_primary',
+                'name' => 'primary_color',
                 'type' => 'text',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '25',
+                    'width' => '',
                     'class' => '',
                     'id' => '',
                 ),
-                'default_value' => '',
-                'placeholder' => 'ee0099',
-                'prepend' => '#',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
-                'key' => 'field_609502ff7d36d',
-                'label' => 'Secondary Color',
-                'name' => 'color_secondary',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '25',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => 'ff0099',
+                'default_value' => 'ee0099',
+                'placeholder' => '',
                 'prepend' => '#',
                 'append' => '',
                 'maxlength' => '',
@@ -2449,25 +2431,6 @@ if( function_exists('acf_add_local_field_group') ):
                 'append' => '',
                 'maxlength' => '',
             ),
-            array(
-                'key' => 'field_6094cf3d05dce',
-                'label' => 'Signup HTML',
-                'name' => 'signup_html',
-                'type' => 'textarea',
-                'instructions' => 'Paste custom HTML here',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'maxlength' => '',
-                'rows' => '',
-                'new_lines' => '',
-            ),
         ),
         'location' => array(
             array(
@@ -2487,7 +2450,5 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-
     endif;
 ?>
-
