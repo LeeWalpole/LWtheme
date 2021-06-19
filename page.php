@@ -32,7 +32,7 @@ color:#ee0099;
             <em class="description"><?php echo get_the_excerpt();?></em>
             <?php } ?>
         </header>
-        <?php // get_template_part( 'snippets/snippet', 'byline' ); ?>
+        <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
 
         <aside id="chapters" class="bg-black">
             <!-- Chapters appear Below -->
@@ -48,6 +48,11 @@ color:#ee0099;
 
 <?php get_template_part( 'blocks/blocks' ); ?>
 
-<?php get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
+<?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
 <?php get_footer();  ?>
+
+
+
+
+
