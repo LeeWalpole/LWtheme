@@ -109,7 +109,6 @@ $image = get_sub_field('image') ?: get_the_excerpt();;
 $link = get_sub_field('url') ?: get_the_excerpt();;
 $link_target = $link['target'] ? $link['target'] : '_self' ?: get_the_excerpt();; 
 $link_title = $link['title'] ?: get_the_excerpt();;
-
 ?>
 
 
@@ -145,7 +144,7 @@ $link_title = $link['title'] ?: get_the_excerpt();;
 
 
 <?php
-/*
+
 include ('block-settings.php'); ?>
 
 <?php if( have_rows('icon_settings') ) :  while( have_rows('icon_settings') ): the_row(); ?>
@@ -197,5 +196,5 @@ include ('block-settings.php'); ?>
         </article>
     </section>
 </div>
-<?php } */ // block layout ?>
+<?php }  // block layout ?>
 
