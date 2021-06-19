@@ -12,9 +12,6 @@
 
                 <p>test</p>
 
-
-
-
             </div>
         </article>
     </section>
@@ -104,14 +101,15 @@ text-align: center;
                 <?php while( have_rows('icon') ): the_row(); ?>
              
                 <?php 
-$kicker = get_sub_field('kicker');
-$headline = get_sub_field('headline');
-$lead = get_sub_field('lead');
-$url = get_sub_field('url');
-$image = get_sub_field('image');
-$link = get_sub_field('url');
-$link_target = $link['target'] ? $link['target'] : '_self'; 
-$link_title = $link['title'];
+$kicker = get_sub_field('kicker') ?: get_the_excerpt();;
+$headline = get_sub_field('headline') ?: get_the_excerpt();;
+$lead = get_sub_field('lead') ?: get_the_excerpt();;
+$url = get_sub_field('url') ?: get_the_excerpt();;
+$image = get_sub_field('image') ?: get_the_excerpt();;
+$link = get_sub_field('url') ?: get_the_excerpt();;
+$link_target = $link['target'] ? $link['target'] : '_self' ?: get_the_excerpt();; 
+$link_title = $link['title'] ?: get_the_excerpt();;
+
 ?>
 
 
@@ -141,7 +139,7 @@ $link_title = $link['title'];
 
 
 
-
+<h1>block-icons.php (above)</h1>
 
 
 
@@ -201,4 +199,3 @@ include ('block-settings.php'); ?>
 </div>
 <?php } */ // block layout ?>
 
-<h1>block-icons.php (above)</h1>

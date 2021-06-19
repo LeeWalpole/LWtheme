@@ -46,7 +46,7 @@ color:#ee0099;
 <?php endif; ?>
 <?php endwhile; endif; ?>
 
-<?php get_template_part( 'blocks/blocks' ); ?>
+<?php // get_template_part( 'blocks/blocks' ); ?>
 
 <?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
