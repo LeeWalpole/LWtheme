@@ -32,12 +32,11 @@ color:#ee0099;
             <em class="description"><?php echo get_the_excerpt();?></em>
             <?php } ?>
         </header>
-        <?php get_template_part( 'snippets/snippet', 'byline' ); ?>
-
+        <?php // get_template_part( 'snippets/snippet', 'byline' ); ?>
+ <!-- 
         <aside id="chapters" class="bg-black">
-            <!-- Chapters appear Below -->
         </aside>
-
+ -->
         <?php the_content(); ?>
         <?php get_template_part( 'snippets/snippet', 'article-sharers' ); // col-4 ?>
     </article>
