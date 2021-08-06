@@ -15,12 +15,16 @@ function wpdocs_theme_setup() {
     update_option( 'large_size_w', 1920 );
     update_option( 'large_size_h', 9999 );
     update_option( 'large_crop', true );
-    add_image_size( 'puff', 150, 100, true );
     add_image_size( 'teaser_standard', 360, 240, true );
-    add_image_size( 'desktop_plus', 1920, false ); // 1920 full
-    add_image_size( 'desktop', 1366, false ); // desktop full
-    add_image_size( 'smartphone', 360, false ); // iPhone full
-    add_image_size( 'tablet', 768, false ); // Tablet Full
+    add_image_size( 'teaser_standard', 360, 240, true );
+    add_image_size( 'w-desktop_plus', 1920, false ); // 1920 full
+    add_image_size( 'w-desktop', 1366, false ); // desktop full
+    add_image_size( 'w-smartphone', 360, false ); // iPhone full
+    add_image_size( 'w-tablet', 768, false ); // Tablet Full
+    add_image_size( 'nav_logo_smartphone', 9999, 50, false );
+    add_image_size( 'nav_logo_desktop', 9999, 72, false );
+    add_image_size( 'hero_logo_smartphone', 200, false );
+    add_image_size( 'hero_logo_desktop', 400, false );
     add_filter('img_caption_shortcode_width', '__return_false');
     }
     include_once( 'functions/acf.php' );
@@ -31,5 +35,4 @@ function wpdocs_theme_setup() {
     include_once( 'functions/read-time.php' );
     include_once( 'functions/lazyload-video.php' );
     if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 3);
-    if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', false);
 ?>

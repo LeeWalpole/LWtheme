@@ -1,3 +1,5 @@
+<h1>Block Teaser</h1>
+
 <?php include ('block-settings.php'); ?>
 
 <?php if( have_rows('teaser_settings') ) :  while( have_rows('teaser_settings') ): the_row(); ?>
