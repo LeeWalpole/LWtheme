@@ -1,4 +1,9 @@
-<h1>Block Teaser</h1>
+<h1>Split Block Teaser</h1>
+
+
+
+<?php /*
+
 
 <?php include ('block-settings.php'); ?>
 
@@ -71,3 +76,6 @@
     </section>
 </div>
 <?php endwhile; endif; // end splitbox ?>
+
+
+*/ ?>
