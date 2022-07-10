@@ -54,9 +54,9 @@ $hero_subdeck = get_field('hero_subdeck'); // for some reason this didn't work
             <?php if ($hero_kicker) : ?><strong class="kicker"><?php echo $hero_kicker; ?></strong><?php endif; ?>
             <?php echo $headline; ?>
             <?php if ($hero_subdeck) : ?><em class="subdeck"><?php echo $hero_subdeck; ?></em><?php endif; ?>
-            <?php if($hero_html ) : ?>
+            <?php /* if($hero_html ) : ?>
             <?php echo $hero_html; ?>
-            <?php endif; ?>
+            <?php endif; */ ?>
         </header>
     </section>
 </div>

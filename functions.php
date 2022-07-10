@@ -32,7 +32,7 @@ function wpdocs_theme_setup() {
     include_once( 'functions/postlist-thumbnails.php' );
     include_once( 'functions/header-junk.php' );
     include_once( 'functions/lazyload-images.php' );
-    include_once( 'functions/read-time.php' );
+    // include_once( 'functions/read-time.php' );
     include_once( 'functions/lazyload-video.php' );
     if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 3);
 ?>

@@ -4,6 +4,6 @@
 
 <?php get_template_part( 'blocks/blocks' ); ?>
 
-<?php get_template_part( 'snippets/newsletter' ); ?>
+<?php // get_template_part( 'snippets/newsletter' ); ?>
 
 <?php get_footer();  ?>
