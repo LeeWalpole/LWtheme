@@ -1,3 +1,7 @@
+<h6>block-standard-teasers</h6>
+<?php /*
+
+
 <?php include ('block-settings.php'); ?>
 
 <?php if( have_rows('teaser_settings') ) : while( have_rows('teaser_settings') ) : the_row();?>
@@ -50,3 +54,6 @@ $teaser_ratio = get_sub_field('teaser_ratio'); // this works
     </section>
 </div>
 <?php } // block layout ?>
+
+
+*/?>
