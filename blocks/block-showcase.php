@@ -40,7 +40,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
     $headline = get_field('hero_headline') ?: get_the_title(); 
     $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
     $feature_youtube = get_field('feature_youtube'); 
     ?>
 
@@ -81,19 +81,19 @@ $showcase_heading = get_sub_field('showcase_heading');
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
 
-        <div class="puff_teasers colspan-5 bg-white">
+        <div class="thumbnail_teasers colspan-5 bg-white">
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
     $category = get_the_category();
     $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
     $headline = get_field('hero_headline') ?: get_the_title(); 
     $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
     $feature_youtube = get_field('feature_youtube'); 
     ?>
 
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
-                class="puff_teaser teaser bg-white">
+                class="thumbnail_teaser teaser bg-white">
                 <figure>
                     <picture>
                         <source type="image/jpg" srcset="<?php echo esc_attr($teaser_image_url); ?>">
@@ -108,7 +108,7 @@ $showcase_heading = get_sub_field('showcase_heading');
             </a>
             <?php endforeach; ?>
             <!-- endwhile above -->
-        </div><!-- puff_teasers -->
+        </div><!-- thumbnail_teasers -->
     </div>
 </div>
 <!-- end have posts below -->
@@ -140,7 +140,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
     $headline = get_field('hero_headline') ?: get_the_title(); 
     $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+    $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
     $feature_youtube = get_field('feature_youtube'); 
     ?>
 
