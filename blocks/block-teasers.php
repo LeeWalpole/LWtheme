@@ -1,7 +1,6 @@
 
 <?php /*
-
-
+block teasre
 <?php include ('block-settings.php'); ?>
 
 <?php if( have_rows('teaser_settings') ) : while( have_rows('teaser_settings') ) : the_row();?>
@@ -56,4 +55,4 @@ $teaser_ratio = get_sub_field('teaser_ratio'); // this works
 <?php } // block layout ?>
 
 
-*/?>
+*/?> 
