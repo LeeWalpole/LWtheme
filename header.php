@@ -180,6 +180,48 @@ background-color: var(--color);
 </style>
 
 
+<!-- Temp Fixes...  Will sort when build the 2022 theme -->
+
+<style>
+        :root { 
+            --color-white: #fff;
+            --color-offwhite: #f1f1f1;
+            --color-black: #101010;
+            --color-offblack: #202020;
+            --color-grey: #666;
+            --color-lightgrey: #eee;
+        }
+        </style>
+    <style>
+
+
+.nav-bar, .nav-menu, .nav-on .nav-bar-links li a, .article-body>aside { 
+background-color:var(--color-black)!important;
+color:var(--color-white)!important;
+}
+
+.article-body dt, .article-body dd, .article-body dd a { 
+    color:var(--color-lightgrey)!important;
+} 
+
+.article-body dd a {  
+    text-decoration: underline;
+} 
+
+.article-body dd a:hover {  
+    color:var(--color)!important;
+} 
+
+.nav-bar .hamburger span, .nav-on .nav-bar .hamburger span { 
+    background-color:var(--color-white)!important;
+}
+
+.article-body aside p { 
+    margin-bottom:var(--padding);
+}
+
+</style>
+
 </head>
 
 <body id="body" class="body prescroll">
