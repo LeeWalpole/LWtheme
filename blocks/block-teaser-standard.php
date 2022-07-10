@@ -1,4 +1,4 @@
-<h6>block-teaser-standard</h6>
+<h6>2. block-teaser-standard</h6>
 <?php /*
 
 
