@@ -1,5 +1,4 @@
 
-
 <div class="standard-teasers teasers <?php echo $bg_color; ?>">
             <?php
     global $post;
