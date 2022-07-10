@@ -11,7 +11,7 @@
     <div>
         <?php $u_time = get_the_time('U'); $u_modified_time = get_the_modified_time('U'); 
 if ($u_modified_time >= $u_time + 86400) { echo "<time id='modified' class='modified'>Modified: "; the_modified_time('F jS, Y'); echo "</time> "; } ?>
-        <small>(<?php echo reading_time(); ?> read)</small>
+       <!-- <small>(<?php // echo reading_time(); ?> read)</small>-->
     </div>
 </footer>
     <!--
