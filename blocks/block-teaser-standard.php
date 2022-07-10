@@ -1,3 +1,7 @@
+<h6>block-teaser-standard</h6>
+<?php /*
+
+
 
 
 <?php global $post; if( have_rows('teasers',$post->ID) ) : ?>
@@ -41,3 +45,4 @@ target="<?php echo esc_attr( $link_target ); ?>" class="teaser bg-white">
 
 
 
+*/?>

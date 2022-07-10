@@ -1,3 +1,4 @@
+<h6>block-standard-teasers</h6>
 <?php /*
 
 <div class="standard-teasers teasers <?php echo $bg_color; ?>">
@@ -24,4 +25,3 @@
 
     */?>
 
-    <h6>block-standard-teasers</h6>
