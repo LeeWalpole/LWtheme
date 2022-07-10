@@ -3,7 +3,7 @@
     class="split-box bg-white" value="lee">
     <article class="w-full grid">
         <figure class="colspan-5 bg-color prefade">
-            <?php $featured_image_smartphone = get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>
+            <?php $featured_image_smartphone = get_the_post_thumbnail_url($post->ID, 'medium'); ?>
             <picture class="ratio" data-ratio="3x2">
                 <source type="image/jpeg" media="(min-width: 461px)"
                     srcset="<?php echo esc_attr($featured_image_smartphone); ?>">

@@ -15,6 +15,7 @@ function wpdocs_theme_setup() {
     update_option( 'large_size_w', 1920 );
     update_option( 'large_size_h', 9999 );
     update_option( 'large_crop', true );
+    /*
     add_image_size( 'teaser_standard', 360, 240, true );
     add_image_size( 'teaser_standard', 360, 240, true );
     add_image_size( 'w-desktop_plus', 1920, false ); // 1920 full
@@ -26,6 +27,7 @@ function wpdocs_theme_setup() {
     add_image_size( 'hero_logo_smartphone', 200, false );
     add_image_size( 'hero_logo_desktop', 400, false );
     add_filter('img_caption_shortcode_width', '__return_false');
+    */
     }
     include_once( 'functions/acf.php' );
     include_once( 'functions/acf-options.php' );

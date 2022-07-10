@@ -13,7 +13,7 @@ $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
 $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
@@ -24,7 +24,7 @@ $feature_youtube = get_field('feature_youtube');
                     data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
-                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
                         <source type="image/jpeg" media="(max-width: 460px)"
                             srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
                         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
@@ -49,7 +49,7 @@ $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
 $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
             <?php if( $wp_query->current_post  >= 1  && $wp_query->current_post  <= 4  ) : ?>
@@ -90,7 +90,7 @@ $category = get_the_category();
 $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
 $headline = get_field('hero_headline') ?: get_the_title(); 
 $subdeck = get_field('hero_subdeck'); // for some reason this didn't work
-$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'puff');
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
 $feature_youtube = get_field('feature_youtube'); 
 ?>
 
@@ -101,7 +101,7 @@ $feature_youtube = get_field('feature_youtube');
                     data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
-                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
                         <source type="image/jpeg" media="(max-width: 460px)"
                             srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
                         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
