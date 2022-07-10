@@ -1,6 +1,41 @@
-<h1>Split Block Teaser</h1>
+<?php if( have_rows('teaser',$post->ID) ) : while( have_rows('teaser',$post->ID) ) : the_row(); $counter++; ?>
 
+<?php 
+$kicker = get_sub_field('kicker');
+$headline = get_sub_field('headline');
+$lead = get_sub_field('lead');
+$url = get_sub_field('url');
+$acf_image_thumbnail = wp_get_attachment_image_src(get_sub_field('image'), '')[0]; 
+$image_url_large = Jetpack_PostImages::fit_image_url ($acf_image_thumbnail, 1000, $teaser_image_height);
+$image_url_medium = Jetpack_PostImages::fit_image_url ($acf_image_thumbnail, 600, $teaser_image_height);
+$image_url_small = Jetpack_PostImages::fit_image_url ($acf_image_thumbnail, 360, $teaser_image_height);
+?>
 
+<div class="bg-color row-block split-block">
+      <div class="split split-swap w-max bg-white" data-direction="???">
+
+        <figure>
+          <picture class="ratio bg-white" data-ratio="4x5">
+            <source type="image/jpeg" media="(min-width: 461px)" srcset="<?php echo esc_attr($image_url_medium); ?>">
+            <source type="image/jpeg" media="(max-width: 460px)" srcset="<?php echo esc_attr($image_url_small); ?>">
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Flames Agency"
+              class="prefade lazyload" loading="lazy">
+          </picture>
+        </figure>
+
+        <header class="header bg-white prefade">
+          <!-- <strong class="kicker">BEST CELEB BARNETS</strong> -->
+          <h6 class="headline">Get more followers</h6>
+          <p class="lead">We’ll promote you to thousands of new fans every week.</p>
+          <div class="buttons">
+            <a href="#hero" class="button view-modal">LEARN MORE</a>
+          </div>
+        </header>
+
+      </div>
+    </div>
+
+    <?php endwhile; endif; // end splitbox ?>
 
 <?php /*
 

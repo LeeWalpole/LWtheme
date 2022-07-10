@@ -9,7 +9,3 @@
   gtag('config', '<?php echo esc_attr($google_analytics); ?>');
 </script>
 <?php endif; ?>
-
-
-
-

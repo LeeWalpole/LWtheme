@@ -1,4 +1,5 @@
 <!-- *** HERO BELOW *** -->
+<?php $hero_layout = get_field('hero_layout'); ?>
 <?php if (have_rows('header', $post->ID) ) : ?>
 <?php while( have_rows('header',$post->ID) ) : the_row(); ?>
 <?php
@@ -11,7 +12,6 @@ $more_text = get_sub_field('more_text');
 ?>
 <?php endwhile; ?>
 <?php endif; //  end have_rows('hero_header' ?>
-
 <?php 
 $kicker = $acf_kicker ?: "<span>INSPIRED</span> PRESENTS"; 
 $headline = $acf_headline ?: the_title(); 
@@ -56,8 +56,7 @@ $lead = $acf_lead;
 
 </style>
 
-<?php $hero_feature = get_field('hero_feature'); ?>
-<div class="bg-black relative z-index-3 <?php echo $hero_feature ?>">
+<div class="bg-black relative z-index-3 <?php echo $hero_layout; ?>">
     <div class="hero hero-grid hero-video">
         <header class="w-full margin-auto">
             <section class="hero-header w-full text-center">

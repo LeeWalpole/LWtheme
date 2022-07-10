@@ -1,18 +1,18 @@
-navMenu: {
-const body = document.querySelector("#body");
-const hamburger = document.querySelector(".hamburger");
-const navmenu = document.querySelector(".nav-menu");
-const links = document.querySelectorAll(".nav-links li");
+// navMenu: {
+// const body = document.querySelector("#body");
+// const hamburger = document.querySelector(".hamburger");
+// const navmenu = document.querySelector(".nav-menu");
+// const links = document.querySelectorAll(".nav-links li");
 
-hamburger.addEventListener('click', ()=>{
-//Animate Links
-    links.forEach(link => {
-        link.classList.toggle("link-fade");
+// hamburger.addEventListener('click', ()=>{
+// //Animate Links
+//     links.forEach(link => {
+//         link.classList.toggle("link-fade");
         
-    });
-    body.classList.toggle("nav-on"); // add class to body = burger anomation, nav dropdown etc
-});
-}
+//     });
+//     body.classList.toggle("nav-on"); // add class to body = burger anomation, nav dropdown etc
+// });
+// }
 
 
 /*

@@ -18,7 +18,7 @@ $logo_url = get_field('nav_logo','options');
 $logo_short_url = substr($logo_url, 8); 
 $logo_jetpack_url = "https://i0.wp.com/".$logo_short_url . "?h=80";
 ?>
-<div id="nav" class="nav">
+<div id="nav" class="nav" data-theme="light">
     <nav id="nav-bar" class="nav-bar">
         <?php if ($logo_url) { ?>
         <a href="<?php echo esc_html(get_home_url()); ?>" class="nav-logo prefade"
