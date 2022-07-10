@@ -1,4 +1,6 @@
-            <div class="standard-teasers teasers <?php echo $bg_color; ?>">
+<?php /*
+
+<div class="standard-teasers teasers <?php echo $bg_color; ?>">
             <?php
     global $post;
     $myposts = get_posts( array(
@@ -19,3 +21,7 @@
     }
     ?>
             </div>
+
+    */?>
+
+    <h6>block-standard-teasers</h6>
