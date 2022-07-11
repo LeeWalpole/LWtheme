@@ -19,9 +19,9 @@ $showcase_heading = get_sub_field('showcase_heading');
     if( $posts ): ?>
 
 <div class="bg-white row-block">
-    <div class="grid grid-gap w-max showcase">
 
-        <?php if ($showcase_heading) : ?>
+
+<?php if ($showcase_heading) : ?>
         <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>"
             class="colspan-12">
             <header class="showcase_header header">
@@ -32,6 +32,10 @@ $showcase_heading = get_sub_field('showcase_heading');
             </header>
         </a>
         <?php endif; ?>
+
+    <div class="grid grid-gap w-max showcase">
+
+
 
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
