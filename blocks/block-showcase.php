@@ -19,23 +19,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     if( $posts ): ?>
 
 <div class="bg-white row-block">
-
-
-<?php if ($showcase_heading) : ?>
-        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>"
-            class="colspan-12">
-            <header class="showcase_header header">
-                <i class="fas fa-arrow-circle-right color"></i>
-                <h2 class="headline">
-                    <?php echo $showcase_heading; ?>
-                </h2>
-            </header>
-        </a>
-        <?php endif; ?>
-
-    <div class="grid grid-gap w-max showcase">
-
-
+    <div class="grid grid-gap w-max">
 
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
@@ -178,3 +162,18 @@ $showcase_heading = get_sub_field('showcase_heading');
 <?php } // $showcase == "showcase_all" || "showcase_limit")  ?>
 
 <?php wp_reset_postdata(); ?>
+
+
+
+
+<?php if ($showcase_heading) : ?>
+        <a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>"
+            class="colspan-12">
+            <header class="showcase_header header">
+                <i class="fas fa-arrow-circle-right color"></i>
+                <h2 class="headline">
+                    <?php echo $showcase_heading; ?>
+                </h2>
+            </header>
+        </a>
+        <?php endif; ?>

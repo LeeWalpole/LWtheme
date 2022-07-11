@@ -134,7 +134,7 @@ $feature_youtube = get_field('feature_youtube');
 <?php endif; ?>
 <?php endwhile; endif; ?>
 
-<h1>Test</h1>
+
 
 <?php get_template_part( 'snippets/newsletter' ); ?>
 

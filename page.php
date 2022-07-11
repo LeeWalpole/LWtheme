@@ -45,8 +45,108 @@ color:#ee0099;
 <?php endif; ?>
 <?php endwhile; endif; ?>
 
-<?php get_template_part( 'blocks/blocks' ); ?>
+<?php // get_template_part( 'blocks/blocks' ); ?>
 
 <?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
+
+
+
+
+
+
+<?php     
+$teaser_count = -1;
+$teaser_category = get_sub_field('category');
+$teaser_tag = get_sub_field('tag');
+$category_link = get_category_link( $teaser_category);
+?>
+
+<?php
+    global $post;
+    $myposts = get_posts( array( 
+    'posts_per_page' => $teaser_count,
+    'no_found_rows'  => true, 
+    'offset' => 0, 
+    'tag_id' => $teaser_tag, 
+    'category' => $teaser_category ) ); 
+    if ( $myposts ) : ?>
+
+
+
+<div class="bg-white row-block">
+    <div class="grid grid-gap w-max">
+        <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
+
+            <?php while ( have_posts() ) : the_post();  ?>
+            <?php
+$category = get_the_category();
+$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+$headline = get_field('hero_headline') ?: get_the_title(); 
+$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+$feature_youtube = get_field('feature_youtube'); 
+?>
+
+            <?php if( $wp_query->current_post  <= 0 ) : ?>
+            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
+                value="<?php echo esc_attr($headline); ?>">
+                <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
+                    data-ratio="3x2">
+                    <picture>
+                        <source type="image/jpeg" media="(min-width: 461px)"
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
+                        <source type="image/jpeg" media="(max-width: 460px)"
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                            alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
+                    </picture>
+                </figure>
+                <header class="header bg-white postfade">
+                    <strong class="kicker"><?php echo $kicker; ?></strong>
+                    <h6 class="headline"><?php echo $headline; ?></h6>
+                    <?php if($subdeck) : ?><p class="subdeck"><?php echo $subdeck; ?></p><?php endif; ?>
+                </header>
+            </a>
+            <?php endif; // first post ?>
+            <?php endwhile; ?>
+        </article>
+        <?php rewind_posts(); ?>
+
+        <div class="puff_teasers colspan-5 bg-white">
+            <?php while ( have_posts() ) : the_post(); ?>
+            <?php
+$category = get_the_category();
+$kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
+$headline = get_field('hero_headline') ?: get_the_title(); 
+$subdeck = get_field('hero_subdeck'); // for some reason this didn't work
+$teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+$feature_youtube = get_field('feature_youtube'); 
+?>
+            <?php if( $wp_query->current_post  >= 1  && $wp_query->current_post  <= 4  ) : ?>
+            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
+                class="puff_teaser teaser bg-white">
+                <figure>
+                    <picture>
+                        <source type="image/jpg" srcset="<?php echo esc_attr($teaser_image_url); ?>">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                        alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
+                    </picture>
+                </figure>
+                <header class="header">
+                    <strong class="kicker"><?php echo $kicker; ?></strong>
+                    <h6 class="headline"><?php echo $headline; ?></h6>
+                </header>
+            </a>
+            <?php endif; // posts 2+ ?>
+            <!-- endwhile below -->
+            <?php endwhile; ?>
+                        <!-- endwhile above -->
+        </div><!-- puff_teasers -->
+    </div>
+</div>
+          <!-- end have posts below -->
+<?php endif; // have_posts ?>
+
+
 
 <?php get_footer();  ?>
