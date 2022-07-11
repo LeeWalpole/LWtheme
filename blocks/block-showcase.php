@@ -9,16 +9,6 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
-<?php if ($showcase_heading) : ?>
-<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
-    <header class="showcase_header header">
-        <i class="fas fa-arrow-circle-right color"></i>
-        <h2 class="headline">
-            <?php echo $showcase_heading; ?>
-        </h2>
-    </header>
-</a>
-<?php endif; ?>
 
 <?php 
     $posts = get_posts(array(
@@ -31,6 +21,18 @@ $showcase_heading = get_sub_field('showcase_heading');
 
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
+        
+    <?php if ($showcase_heading) : ?>
+<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
+    <header class="showcase_header header">
+        <i class="fas fa-arrow-circle-right color"></i>
+        <h2 class="headline">
+            <?php echo $showcase_heading; ?>
+        </h2>
+    </header>
+</a>
+<?php endif; ?>
+
         <article class="teaser standard_teaser teaser_highlight bg-white colspan-7">
 
             <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
