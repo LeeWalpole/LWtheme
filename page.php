@@ -50,7 +50,6 @@ color:#ee0099;
 <?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
 
-<h1>Category?</h1>
 
 <?php     
 $teaser_count = -1;
@@ -69,11 +68,12 @@ $category_link = get_category_link( $teaser_category);
     if ( $myposts ) : ?>
 
 
+<header class="header">
+            <h2 class="headline">MUSCLE</h2>
+        </header>
+
 <div class="w-max news-block">
     <div class="news-block-feature">
-        <header class="header">
-            <h2 class="headline">LATEST</h2>
-        </header>
         <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
         <?php
