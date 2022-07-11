@@ -2,6 +2,9 @@
 
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
+
+<h1>Test</h1>
+
 <?php if ( have_posts() ) : ?>
 <div class="bg-white row-block">
     <div class="grid grid-gap w-max">
