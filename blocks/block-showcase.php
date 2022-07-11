@@ -60,7 +60,7 @@ $showcase_heading = get_sub_field('showcase_heading');
         </article>
         <?php endif; // have_posts ?>
 
-        <?php wp_reset_postdata(); ?>
+        
 
         <?php 
     $posts = get_posts(array(
