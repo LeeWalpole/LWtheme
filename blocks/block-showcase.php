@@ -141,10 +141,7 @@ $showcase_heading = get_sub_field('showcase_heading');
                 <figure class="bg-white prefade ratio <?php if ($feature_youtube) : echo "video_teaser"; endif; ?>"
                     data-ratio="3x2">
                     <picture>
-                        <source type="image/jpeg" media="(min-width: 461px)"
-                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
-                        <source type="image/jpeg" media="(max-width: 460px)"
-                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
+                        <source type="image/jpg" srcset="<?php echo esc_attr($teaser_image_url); ?>">
                         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                             alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
