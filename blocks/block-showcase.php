@@ -9,7 +9,16 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
-<h1>Showcase</h1>
+<?php if ($showcase_heading) : ?>
+<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
+    <header class="showcase_header header">
+        <i class="fas fa-arrow-circle-right color"></i>
+        <h2 class="headline">
+            <?php echo $showcase_heading; ?>
+        </h2>
+    </header>
+</a>
+<?php endif; ?>
 
 <?php 
     $posts = get_posts(array(
@@ -59,6 +68,9 @@ $showcase_heading = get_sub_field('showcase_heading');
             <?php endforeach; ?>
         </article>
         <?php endif; // have_posts ?>
+
+
+        <?php wp_reset_postdata(); ?>
 
         
 
@@ -167,13 +179,3 @@ $showcase_heading = get_sub_field('showcase_heading');
 
 
 
-<?php if ($showcase_heading) : ?>
-<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
-    <header class="showcase_header header">
-        <i class="fas fa-arrow-circle-right color"></i>
-        <h2 class="headline">
-            <?php echo $showcase_heading; ?>
-        </h2>
-    </header>
-</a>
-<?php endif; ?>
