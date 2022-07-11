@@ -18,11 +18,7 @@ $category_link = get_category_link( $teaser_category);
 
 <div class="w-max news-block">
 
-<header class="header">
-            <h2 class="headline">LATEST</h2>
-        </header>
-
-    <div class="news-block-feature">
+   <div class="news-block-feature">
 
         <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
