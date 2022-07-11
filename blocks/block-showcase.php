@@ -9,6 +9,8 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
+<?php include ('block-settings.php'); ?>
+
 
 <?php 
     $posts = get_posts(array(
@@ -19,7 +21,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
 
-<div class="bg-white row-block">
+<div class="<?php echo esc_attr($bg_color); ?> row-block">
     <div class="grid grid-gap w-max">
         
     <?php if ($showcase_heading) : ?>
@@ -85,7 +87,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
 
-        <div class="puff_teasers colspan-5 bg-white">
+        <div class="puff_teasers colspan-5">
             <?php $i=1; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
     $category = get_the_category();
