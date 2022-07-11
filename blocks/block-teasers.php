@@ -1,3 +1,5 @@
+<h1>block-teasers</h1>
+
 
 <?php include ('block-settings.php'); ?>
 
