@@ -72,7 +72,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     if( $posts ): ?>
 
         <div class="puff_teasers colspan-5 bg-white">
-            <?php $i=0; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+            <?php $i=1; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
     $category = get_the_category();
     $kicker = get_field('hero_kicker') ?: $category[0]->cat_name;
