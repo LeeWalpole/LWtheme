@@ -25,7 +25,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     <div class="grid grid-gap w-max">
         
     <?php if ($showcase_heading) : ?>
-<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12">
+<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12"  style="margin-left:var(--padding)">
     <header class="showcase_header header">
         <i class="fas fa-arrow-circle-right color"></i>
         <h2 class="headline">
@@ -87,7 +87,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
 
-        <div class="puff_teasers colspan-5">
+        <div class="puff_teasers colspan-5" style="margin-left:var(--padding)">
             <?php $i=1; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
     $category = get_the_category();
