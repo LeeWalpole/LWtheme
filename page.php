@@ -50,7 +50,7 @@ color:#ee0099;
 <?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 
 
-
+<h1>Category?</h1>
 
 <?php     
 $teaser_count = -1;
