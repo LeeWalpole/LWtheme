@@ -54,8 +54,7 @@ color:#ee0099;
 
 <?php     
 $teaser_count = -1;
-$teaser_category = get_sub_field('category');
-$teaser_tag = get_sub_field('tag');
+$teaser_category = 323;
 $category_link = get_category_link( $teaser_category);
 ?>
 
