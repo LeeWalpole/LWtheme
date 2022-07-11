@@ -3,7 +3,7 @@
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
 
 
-<h1>Test</h1>
+
 
 <?php if ( have_posts() ) : ?>
 <div class="bg-white row-block">
@@ -133,6 +133,8 @@ $feature_youtube = get_field('feature_youtube');
 </article>
 <?php endif; ?>
 <?php endwhile; endif; ?>
+
+<h1>Test</h1>
 
 <?php get_template_part( 'snippets/newsletter' ); ?>
 
