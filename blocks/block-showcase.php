@@ -94,7 +94,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     $feature_youtube = get_field('feature_youtube'); 
     ?>
 
-            <?php $i++; if( $i >= 1 && $i <= 6  ) : ?>
+            <?php $i++; if( $i >= 2 && $i <= 6  ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
                 <figure>
