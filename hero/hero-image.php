@@ -50,7 +50,7 @@ $acf_hero_image_url = wp_get_attachment_image_src(get_sub_field('hero_image_port
         data-srcset="<?php echo $featured_image_thumbnail; ?>">
     <!-- Smartphone (portrait) -->
     <source type="image/jpg" media="(max-width: 460px)" data-srcset="<?php echo $featured_image_thumbnail; ?>">
-    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="lazyload" loading="lazy"
+    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="lazyload" loading="eager"
         data-src="<?php echo $featured_image_thumbnail; ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" />
 </picture>
 </figure>
