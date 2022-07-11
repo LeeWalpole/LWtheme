@@ -81,7 +81,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
     $feature_youtube = get_field('feature_youtube'); 
     ?>
-            <?php if( $wp_query->current_post  >= 1  && $wp_query->current_post  <= 4  ) : ?>
+             <?php $i++; if($i >= 1 )  && if($i <= 4 ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
                 <figure>
