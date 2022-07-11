@@ -55,9 +55,9 @@ $showcase_heading = get_sub_field('showcase_heading');
                     data-ratio="3x2">
                     <picture>
                         <source type="image/jpeg" media="(min-width: 461px)"
-                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
                         <source type="image/jpeg" media="(max-width: 460px)"
-                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'medium')); ?>">
                         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                             alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
@@ -102,8 +102,11 @@ $showcase_heading = get_sub_field('showcase_heading');
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
                 <figure>
-                    <picture>
-                        <source type="image/jpg" srcset="<?php echo esc_attr($teaser_image_url); ?>">
+                <picture>
+                        <source type="image/jpeg" media="(min-width: 461px)"
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
+                        <source type="image/jpeg" media="(max-width: 460px)"
+                            srcset="<?php echo esc_url(get_the_post_thumbnail_url($post->ID, 'thumbnail')); ?>">
                         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                             alt="<?php echo esc_attr($headline); ?>" class="lazyload" loading="lazy">
                     </picture>
