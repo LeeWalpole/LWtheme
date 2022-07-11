@@ -87,7 +87,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
 
-        <div class="puff_teasers colspan-5" style="margin-left:var(--padding)">
+        <div class="puff_teasers colspan-5" style="padding-left:var(--padding); padding-right:var(--padding)">
             <?php $i=1; foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php
     $category = get_the_category();
