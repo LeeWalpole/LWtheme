@@ -9,6 +9,8 @@ $showcase_limit = get_sub_field('showcase_limit') ?: "-1";
 $showcase_heading = get_sub_field('showcase_heading');
 ?>
 
+<h1>Showcase</h1>
+
 <?php 
     $posts = get_posts(array(
     'post_type'			=> 'post',
