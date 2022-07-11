@@ -1,4 +1,4 @@
-<?php if (is_post_type_archive() || is_tax() || is_category() || is_archive() || is_tag()) { ?>
+<?php if (is_post_type_archive() || is_tax() || is_category() || is_archive() || is_page() || is_tag()) { ?>
 <?php $acf_fix = get_queried_object();  ?>
 <?php } else { 
 $acf_fix = $post->ID;
