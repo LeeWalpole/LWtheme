@@ -80,9 +80,9 @@ $feature_youtube = get_field('feature_youtube');
 
     <?php endforeach; ?>
 
-    <a href="<?php echo esc_attr($category_link); ?>" class="more">MORE › &#8250;</a>
-
 </div>
+
+<a href="<?php echo esc_attr($category_link); ?>" class="more">MORE › &#8250;</a>
 
 
 <?php endif; ?>
