@@ -9,6 +9,9 @@ $acf_fix = $post->ID;
 <?php while( have_rows('teasers',$acf_fix) ) : the_row();  ?>
 <?php // $counter = 0;?>
 <?php if( have_rows('teaser',$acf_fix) ) : while( have_rows('teaser',$acf_fix) ) : the_row(); $counter++; ?>
+
+
+
 <?php 
 $category = get_the_category(); 
 $kicker = get_sub_field('kicker') ?: $category[0]->cat_name;

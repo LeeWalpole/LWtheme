@@ -1,3 +1,5 @@
+<h1>block-standard-teaser</h1>
+
 
 <div class="standard-teasers teasers <?php echo $bg_color; ?>">
             <?php
