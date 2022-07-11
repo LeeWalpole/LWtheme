@@ -25,7 +25,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     <div class="grid grid-gap w-max">
         
     <?php if ($showcase_heading) : ?>
-<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12"  style="margin-left:var(--padding)">
+<a href="<?php echo esc_url($category_link); ?>" title="<?php echo esc_attr($showcase_heading); ?>" class="colspan-12"  style="margin:0 var(--padding) var(--padding-small);">
     <header class="showcase_header header">
         <i class="fas fa-arrow-circle-right color"></i>
         <h2 class="headline">
