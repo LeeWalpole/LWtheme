@@ -1,3 +1,4 @@
+<h1>block-teasers</h1>
 
 <?php /*
 block teasre
