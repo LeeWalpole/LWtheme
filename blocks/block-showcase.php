@@ -65,8 +65,8 @@ $showcase_heading = get_sub_field('showcase_heading');
         <?php 
     $posts = get_posts(array(
     'post_type'			=> 'post',
-    'posts_per_page' => 4,
-    'offset' => 1,
+    'posts_per_page' => 0,
+    // 'offset' => 1,
     'tag_id' => $teaser_tag, 
     'category' => $teaser_category ) ); 
     if( $posts ): ?>
@@ -81,6 +81,7 @@ $showcase_heading = get_sub_field('showcase_heading');
     $teaser_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
     $feature_youtube = get_field('feature_youtube'); 
     ?>
+
             <?php $i++; if( $i >= 1 && $i <= 4  ) : ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr($headline); ?>"
                 class="puff_teaser teaser bg-white">
