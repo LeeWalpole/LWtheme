@@ -1,4 +1,4 @@
-<aside class="colspan-1">
+
     <ul class="sticky-sidebar sharers">
         <li>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());?>" target="_blank" rel="noopener" class="prefade" title="Share <?php echo esc_attr(get_the_title()); ?> on Facebook.">
@@ -21,4 +21,3 @@
             </a>
         </li>
     </ul>
-</aside>

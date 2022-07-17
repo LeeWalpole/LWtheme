@@ -28,8 +28,6 @@ $acf_hero_image_url = wp_get_attachment_image_src(get_sub_field('hero_image_port
 */
 ?>
 
-
-
 <?php if ( has_post_thumbnail() ) : 
     $featured_image_thumbnail = get_the_post_thumbnail_url("thumbnail"); 
     $featured_image_medium = get_the_post_thumbnail_url("medium"); 

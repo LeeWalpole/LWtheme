@@ -177,6 +177,13 @@ background-color: var(--color);
     transform: rotate(45deg)
 }
 
+.standard_teaser img, 
+.standard_teaser picture {
+    height:100%!important;
+    width:100%!important;
+    scale:unset!important;
+ }
+
 </style>
 
 
