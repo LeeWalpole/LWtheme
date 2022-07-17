@@ -15,7 +15,7 @@ color:#ee0099;
 <?php if ( have_posts() ) :  while ( have_posts() ) : the_post();  ?>
 
 <?php get_template_part( 'snippets/snippet-hero' ); ?>
-<?php get_template_part( 'snippets/snippet-feature' ); ?>
+<?php // get_template_part( 'snippets/snippet-feature' ); ?>
 
 <?php if ( !empty( get_the_content() ) ) : ?>
 
@@ -46,11 +46,9 @@ color:#ee0099;
 <?php endwhile; endif; ?>
 
 
-<p>Blocks Below</p>
-
 <?php get_template_part( 'blocks/blocks' ); ?>
 
-<p>Blocks Above</p>
+
 
 <?php // get_template_part( 'snippets/snippet', 'related' ); // col-4 ?>
 

@@ -178,7 +178,10 @@ background-color: var(--color);
 }
 
 .standard_teaser img, 
-.standard_teaser picture {
+.standard_teaser picture
+.puff_teaser img, 
+.puff_teaser picture 
+{
     height:100%!important;
     width:100%!important;
     scale:unset!important;
