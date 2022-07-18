@@ -63,6 +63,7 @@ img {
 .advertisement-header figcaption { 
     text-align:center;
     height:22px; line-height:22px;
+    font-size:0.8rem;
 } 
 
         </style>
