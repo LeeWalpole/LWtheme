@@ -51,6 +51,16 @@ img {
 
         <?php if ( $ad_image ) { ?>
 
+        <style>
+
+.advertisement-header {
+    padding:var(--padding-small);
+    background:#eee;
+}
+
+        </style>
+
+        <figure class="advertisement-header">
         <a href="<?php echo esc_attr($ad_link); ?>" title="<?php echo esc_attr( get_the_title()); ?>" target="_blank">
             <picture>
                 <!-- Anything bigger than smartphone -->
@@ -63,6 +73,8 @@ img {
                     data-src="<?php echo $ad_image_desktop; ?>" />
             </picture>
         </a>
+        <figcaption>ADVERTISEMENT</figcaption>
+        </figure>
 
         <?php } else echo "Ad image missing??"; ?>
         <!-- Custom Ad Image Above -->
