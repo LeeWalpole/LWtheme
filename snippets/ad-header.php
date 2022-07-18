@@ -59,7 +59,7 @@ img {
                 <source type="image/jpg" media="(max-width: 768px)" data-srcset="<?php echo $ad_image_desktop; ?>"
                     srcset="<?php echo $ad_image_desktop; ?>">
                 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                    alt="<?php echo esc_attr( get_the_title() ); ?>"
+                    alt="<?php echo esc_attr( get_the_title() ); ?>" class="lazyload" loading="lazy"
                     data-src="<?php echo $ad_image_desktop; ?>" />
             </picture>
         </a>
