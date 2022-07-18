@@ -56,7 +56,14 @@ img {
 .advertisement-header {
     padding:var(--padding-small);
     background:#eee;
+    text-align:center;
+    
 }
+
+.advertisement-header figcaption { 
+    text-align:center;
+    height:22px; line-height:22px;
+} 
 
         </style>
 
