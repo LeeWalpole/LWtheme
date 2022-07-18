@@ -43,8 +43,8 @@ img {
         <?php
     $ad_link = get_sub_field( 'ad_link' );
     $ad_image = get_sub_field('ad_image');
-    $ad_image_smartphone = wp_get_attachment_image_src($ad_image, 'strap')[0]; 
-    $ad_image_desktop = wp_get_attachment_image_src($ad_image, 'strap-desktop')[0]; 
+    $ad_image_smartphone = wp_get_attachment_image_src($ad_image, 'thumbnail')[0]; 
+    $ad_image_desktop = wp_get_attachment_image_src($ad_image, 'medium')[0]; 
     ?>
         <?php endwhile; ?>
         <?php endif; ?>
@@ -74,7 +74,7 @@ img {
                 <!-- Custom Ad Image Below -->
 
                 <a href="https://www.loveholidays.com/holidays/?WT.mc_id=aaw-312913&amp;awc=15714_1593234893_7ad34213e73332a754e846ec64b605b1&amp;ch=afi&amp;state=BQoUAAAAA_____hQqmMBWwPwQQQzETWUKUuVH2aY4ZbcVBb5mBAAAyHA"
-                    title="Best party holidays and clubbing destinations in 2020" target="_blank">
+                    title="Best party holidays and clubbing destinations in 2022" target="_blank">
                     <picture>
                         <!-- Anything bigger than smartphone -->
                         <source type="image/jpg" media="(min-width: 461px)"
