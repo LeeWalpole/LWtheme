@@ -57,10 +57,10 @@ img {
                 <source type="image/jpg" media="(min-width: 461px)" srcset="<?php echo esc_attr($ad_image_desktop); ?>">
                 <!-- Smartphone -->
                 <source type="image/jpg" media="(max-width: 460px)"
-                    srcset="<?php echo esc_attr($ad_image_smartphone); ?>">
+                    srcset="<?php echo esc_attr($ad_image_desktop); ?>">
                 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                     alt="<?php echo esc_attr( get_the_title() ); ?>"
-                    data-src="<?php echo esc_attr($ad_image_smartphone); ?>" />
+                    data-src="<?php echo esc_attr($ad_image_desktop); ?>" />
             </picture>
         </a>
 
