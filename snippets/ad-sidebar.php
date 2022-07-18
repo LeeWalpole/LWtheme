@@ -2,7 +2,6 @@
 $ad_type_sidebar = get_field('ad_type_sidebar');
 switch ($ad_type_sidebar) : case "google_adsense": ?>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<aside class="colspan-4 bg-white sidebar">
     <figure class="bg-offwhite ratio sticky-sidebar" data-ratio="1x1">
         <?php 
     $adsense_data_ad_client = get_field('adsense_data_ad_client', 'options');
@@ -18,7 +17,6 @@ switch ($ad_type_sidebar) : case "google_adsense": ?>
         </script>
         <?php } else echo "Google Adsense needs to be be setup."; ?>
     </figure>
-</aside>
 <?php break; case "image": ?>
 <?php if ( have_rows( 'ad_sidebar' ) ) : ?>
 <?php while ( have_rows( 'ad_sidebar' ) ) : the_row(); ?>
@@ -31,7 +29,6 @@ switch ($ad_type_sidebar) : case "google_adsense": ?>
 <?php endwhile; ?>
 <?php endif; ?>
 <?php if ( $ad_image && $ad_link ) { ?>
-<aside class="colspan-4 bg-white sidebar">
     <figure class="bg-color ratio sticky-sidebar" data-ratio="1x1">
         <a href="<?php echo esc_attr($ad_link); ?>" title="<?php echo esc_attr( get_the_title()); ?>" target="_blank">
             <picture>
@@ -48,7 +45,6 @@ switch ($ad_type_sidebar) : case "google_adsense": ?>
         <figcaption>ADVERTISEMENT</figcaption>
     </figure>
     </figure>
-</aside>
 <?php } else { } ?>
 
 <?php break; default: // default too google adsense if it exists... ?>
