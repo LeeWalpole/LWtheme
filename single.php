@@ -23,10 +23,10 @@
 
 <section class="row-block bg-white grid grid-gap w-max">
 
-    <?php get_template_part( 'snippets/snippet', 'side-sharers' ); // col-1 ?>
+    <?php // get_template_part( 'snippets/snippet', 'side-sharers' ); // col-1 ?>
 
 
-    <aside class="colspan-2 bg-white ">
+    <aside class="colspan-3 bg-white ">
 
         <div class="sticky-sidebar">
             <ul class="sharers">
