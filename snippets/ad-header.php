@@ -54,13 +54,13 @@ img {
         <a href="<?php echo esc_attr($ad_link); ?>" title="<?php echo esc_attr( get_the_title()); ?>" target="_blank">
             <picture>
                 <!-- Anything bigger than smartphone -->
-                <source type="image/jpg" media="(min-width: 461px)" srcset="<?php echo esc_attr($ad_image_desktop); ?>">
+                <source type="image/jpg" media="(min-width: 461px)" data-srcset="<?php echo esc_attr($ad_image_desktop); ?>" srcset="<?php echo esc_attr($ad_image_desktop); ?>">
                 <!-- Smartphone -->
-                <source type="image/jpg" media="(max-width: 460px)"
+                <source type="image/jpg" media="(max-width: 460px)" data-srcset="<?php echo esc_attr($ad_image_desktop); ?>"
                     srcset="<?php echo esc_attr($ad_image_desktop); ?>">
                 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                     alt="<?php echo esc_attr( get_the_title() ); ?>"
-                    data-src="<?php echo esc_attr($ad_image_desktop); ?>" />
+                    data-src="<?php echo $ad_image_smartphone; ?>" />
             </picture>
         </a>
 
