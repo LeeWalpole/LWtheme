@@ -14,6 +14,8 @@ window.addEventListener('load', function() {
 <!-- Tracking Codes / non-critical stuff below -->
 <?php get_template_part( 'snippets/footer', 'analytics' ); // ?>
 
+<script src="https://www.dwin2.com/pub.312913.min.js"></script>
+
 <?php if ( is_single() ) : ?>
 
 <?php $color_primary = get_field('primary_color','options'); ?>
