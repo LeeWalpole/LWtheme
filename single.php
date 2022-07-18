@@ -25,10 +25,19 @@
 
     <?php // get_template_part( 'snippets/snippet', 'side-sharers' ); // col-1 ?>
 
+    <style>
+        @media only screen and (min-width: 768px) { 
+            .sticky-scroll { 
+    max-height: 80vh!important;
+    max-height: 80dvh; /* iOS dynamic viewport height */
+    overflow-y: auto;
+}
+        }
+    </style>
 
     <aside class="colspan-3 bg-white ">
 
-        <div class="sticky-sidebar">
+        <div class="sticky-sidebar sticky-scroll">
             <ul class="sharers">
                 <li>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());?>"
