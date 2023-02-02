@@ -15,7 +15,7 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-critical": "^1.1.2",
+    "grunt-critical": "^3.0.1",
     "grunt-grunticon": "^2.3.2",
     "grunt-purifycss": "^0.1.2",
     "grunt-svg-inject": "^1.0.1",
